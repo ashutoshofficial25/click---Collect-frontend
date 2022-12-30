@@ -74,7 +74,10 @@ const Navbar = () => {
            <div className="text-sm hover:font-semibold">Wishlist </div>
            <div className="text-sm hover:font-semibold">Gift Cards </div>
            <div className="text-sm hover:font-semibold">Contact Us </div>
-           <div className="text-sm hover:font-semibold">Myntra Insider </div>
+           <div className="">
+            <span className="text-sm hover:font-semibold">Myntra Insider </span>
+            <span className="items-center justify-center bg-red-400 px-2 text-xs text-white">new</span>
+           </div>
            </div>
            
            <hr className="my-4" />
