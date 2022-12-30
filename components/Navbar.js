@@ -56,45 +56,47 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 
 const Navbar = () => {
   return (
-    <AppBar position="static" color="info">
-      <Container maxWidth="xl">
-        <Toolbar
-          disableGutters
-          sx={{
-            display: "flex",
-            justifyContent: "space-between",
-            padding: "1rem",
-          }}
-        >
-          <Image src={logo} height={50} />
+    <Box>
+      <AppBar position="static" elevation={8}>
+        <Container maxWidth="xl">
+          <Toolbar
+            disableGutters
+            sx={{
+              display: "flex",
+              justifyContent: "space-between",
+              padding: "1rem",
+            }}
+          >
+            <Image src={logo} height={50} />
 
-          <Box display="flex" gap={3}>
-            <Typography variant="h6">Men</Typography>
-            <Typography variant="h6">Women</Typography>
-            <Typography variant="h6">Kids</Typography>
-            <Typography variant="h6">Home & Living </Typography>
-            <Typography variant="h6">Beauty</Typography>
-            <Typography variant="h6">Studio</Typography>
-          </Box>
+            <Box display="flex" gap={3}>
+              <Typography variant="h6">Men</Typography>
+              <Typography variant="h6">Women</Typography>
+              <Typography variant="h6">Kids</Typography>
+              <Typography variant="h6">Home & Living </Typography>
+              <Typography variant="h6">Beauty</Typography>
+              <Typography variant="h6">Studio</Typography>
+            </Box>
 
-          <Search>
-            <SearchIconWrapper>
-              <SearchIcon />
-            </SearchIconWrapper>
-            <StyledInputBase
-              placeholder="Search…"
-              inputProps={{ "aria-label": "search" }}
-            />
-          </Search>
+            <Search>
+              <SearchIconWrapper>
+                <SearchIcon />
+              </SearchIconWrapper>
+              <StyledInputBase
+                placeholder="Search…"
+                inputProps={{ "aria-label": "search" }}
+              />
+            </Search>
 
-          <Box display="flex" gap={3}>
-            <Typography variant="h6">Profile</Typography>
-            <Typography variant="h6">Wishlist</Typography>
-            <Typography variant="h6">Bag</Typography>
-          </Box>
-        </Toolbar>
-      </Container>
-    </AppBar>
+            <Box display="flex" gap={3}>
+              <Typography variant="h6">Profile</Typography>
+              <Typography variant="h6">Wishlist</Typography>
+              <Typography variant="h6">Bag</Typography>
+            </Box>
+          </Toolbar>
+        </Container>
+      </AppBar>
+    </Box>
   );
 };
 

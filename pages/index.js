@@ -9,7 +9,6 @@ import "slick-carousel/slick/slick-theme.css";
 export default function Home() {
   return (
     <>
-      <Navbar />
       {/* <Dropdown /> */}
       <Carousel />
     </>
