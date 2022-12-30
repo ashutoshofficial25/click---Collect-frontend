@@ -1,108 +1,76 @@
 import React from "react";
-import { styled, alpha } from "@mui/material/styles";
-import {
-  AppBar,
-  Container,
-  InputBase,
-  Toolbar,
-  Typography,
-} from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
 import { Box } from "@mui/system";
 import logo from "../public/static/Myntra_Logo.png";
 import Image from "next/image";
 
-const Search = styled("div")(({ theme }) => ({
-  position: "relative",
-  borderRadius: theme.shape.borderRadius,
-  backgroundColor: alpha(theme.palette.common.white, 0.15),
-  "&:hover": {
-    backgroundColor: alpha(theme.palette.common.white, 0.25),
-  },
-  marginLeft: 0,
-  width: "100%",
-  [theme.breakpoints.up("sm")]: {
-    marginLeft: theme.spacing(1),
-    width: "auto",
-  },
-}));
 
-const SearchIconWrapper = styled("div")(({ theme }) => ({
-  padding: theme.spacing(0, 2),
-  height: "100%",
-  position: "absolute",
-  pointerEvents: "none",
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "center",
-}));
-
-const StyledInputBase = styled(InputBase)(({ theme }) => ({
-  color: "inherit",
-  "& .MuiInputBase-input": {
-    padding: theme.spacing(1, 1, 1, 0),
-    // vertical padding + font size from searchIcon
-    paddingLeft: `calc(1em + ${theme.spacing(4)})`,
-    transition: theme.transitions.create("width"),
-    width: "100%",
-    [theme.breakpoints.up("sm")]: {
-      width: "12ch",
-      "&:focus": {
-        width: "20ch",
-      },
-    },
-  },
-}));
 
 const Navbar = () => {
   return (
     <Box>
-      <div class="bg-white">
-  <div class="border py-3 px-6">
-    <div class="flex justify-between items-center">
+      <div className="bg-white ">
+  <div className="border py-3 px-6">
+    <div className="flex justify-between items-center">
+
+    <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
+      <span class="sr-only">Open main menu</span>
+      <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+    </button>
 
       {/* items section */}
-      <div class="flex items-center">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z" />
-        </svg>
-        <span class="ml-2 font-semibold text-[#252C32]">What a Market</span>
+      <div className="flex items-center hidden w-full md:flex md:w-auto " id="navbar-default">
+
+        <img className="h-6 w-10 mx-8 text-red-500" src="https://www.freelogovectors.net/wp-content/uploads/2021/02/myntra-logo-freelogovectors.net_.png"/>
+        
+        <div className="flex gap-x-8">
+        <span className="cursor-pointer rounded-sm py-1 px-2 text-sm font-medium hover:bg-gray-100">Men</span>
+        <span className="cursor-pointer rounded-sm py-1 px-2 text-sm font-medium hover:bg-gray-100">Women</span>
+        <span className="cursor-pointer rounded-sm py-1 px-2 text-sm font-medium hover:bg-gray-100">Kids</span>
+        <span className="cursor-pointer rounded-sm py-1 px-2 text-sm font-medium hover:bg-gray-100">Home & Living</span>
+        <span className="cursor-pointer rounded-sm py-1 px-2 text-sm font-medium hover:bg-gray-100">Beauty</span>
+        <span className="cursor-pointer rounded-sm py-1 px-2 text-sm font-medium hover:bg-gray-100">Studio</span>
+      </div>
+
       </div>
 
       {/* search section */}
-      <div class="ml-6">
-        <input type="text" class="w-full rounded-md border border-[#DDE2E4] px-3 py-2 text-sm" value="" placeholder="Search for products, brands & more"/>
+      <div className="ml-6  hidden w-full md:flex md:w-auto" >
+        <input type="text" className="from-control w-80  w-full rounded-md border border-[#DDE2E4] px-3 py-2 text-sm" value="" placeholder="Search for products, brands & more"/>
       </div>
 
       {/* account section */}
-      <div class="ml-2 flex">
-        <div class=" flex flex-col items-center  cursor-pointer  rounded-md py-2 px-4 hover:bg-gray-100">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-500" viewBox="0 0 20 20" fill="currentColor">
+      <div className="ml-2 flex ">
+        <div className=" flex flex-col items-center  cursor-pointer  rounded-md py-2 px-4 hover:bg-gray-100">
+        <img className="h5 w-5" src="https://cdn-icons-png.flaticon.com/512/1250/1250689.png"/>
+          {/* <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-gray-500" viewBox="0 0 20 20" fill="currentColor">
             <path d="M4 3a2 2 0 100 4h12a2 2 0 100-4H4z" />
             <path fill-rule="evenodd" d="M3 8h14v7a2 2 0 01-2 2H5a2 2 0 01-2-2V8zm5 3a1 1 0 011-1h2a1 1 0 110 2H9a1 1 0 01-1-1z" clip-rule="evenodd" />
-          </svg>
-          <span class="text-sm font-medium">Orders</span>
+          </svg> */}
+          <span className="text-sm font-medium">Profile</span>
         </div>
 
-        <div class="flex flex-col items-center cursor-pointer   rounded-md py-2 px-4 hover:bg-gray-100">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-500" viewBox="0 0 20 20" fill="currentColor">
+        <div className="flex flex-col items-center cursor-pointer   rounded-md py-2 px-4 hover:bg-gray-100">
+          <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-gray-500" viewBox="0 0 20 20" fill="currentColor">
             <path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd" />
           </svg>
-          <span class="text-sm font-medium">Wishlist</span>
+          <span className="text-sm font-medium">Wishlist</span>
         </div>
 
-        <div class="flex flex-col items-center cursor-pointer   rounded-md py-2 px-4 hover:bg-gray-100">
-          <div class="relative">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-500" viewBox="0 0 20 20" fill="currentColor">
-              <path d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z" />
-            </svg>
-            <span class="absolute -top-2 -right-2 flex h-4 w-4 items-center justify-center rounded-full bg-red-500 p-2 text-xs text-white">3</span>
+        <div className="flex flex-col items-center cursor-pointer   rounded-md py-2 px-4 hover:bg-gray-100">
+          <div className="relative">
+          <img className="h5 w-5" src="https://img.icons8.com/fluency-systems-regular/48/null/shopping-bag--v1.png"/>
+            
+            {/* <span className="absolute -top-2 -right-2 flex h-4 w-4 items-center justify-center rounded-full bg-red-500 p-2 text-xs text-white">3</span> */}
           </div>
-          <span class="text-sm font-medium">Cart</span>
+          <span className="text-sm font-medium">Bag</span>
         </div>
       </div>
-    </div>
 
+     
+      
+    </div>
+   
     
   </div>
 </div>
@@ -110,8 +78,8 @@ const Navbar = () => {
   );
 };
 
-{/* sign in btn-- <div class="ml-2 flex cursor-pointer items-center gap-x-1 rounded-md border py-2 px-4 hover:bg-gray-100">
-<span class="text-sm font-medium">Sign in</span>
+{/* sign in btn-- <div className="ml-2 flex cursor-pointer items-center gap-x-1 rounded-md border py-2 px-4 hover:bg-gray-100">
+<span className="text-sm font-medium">Sign in</span>
 </div> */}
 
 export default Navbar;
