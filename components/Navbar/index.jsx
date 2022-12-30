@@ -1,8 +1,11 @@
 import React from "react";
 import SearchIcon from "@mui/icons-material/Search";
 import { Box } from "@mui/system";
-import logo from "../public/static/Myntra_Logo.png";
+import logo from "../../public/static/Myntra_Logo.png";
 import Image from "next/image";
+import styles from "./Navbar.module.scss"
+
+
 
 
 
@@ -24,7 +27,7 @@ const Navbar = () => {
         <img className="h-6 w-10 mx-8 text-red-500" src="https://www.freelogovectors.net/wp-content/uploads/2021/02/myntra-logo-freelogovectors.net_.png"/>
         
         <div className="flex gap-x-8">
-        <span className="cursor-pointer rounded-sm py-3 px-1 text-md font-medium hover:border-b-4 border-red-500">Men</span>
+        <span className="cursor-pointer rounded-sm py-3 px-1 text-md font-medium">Men</span> 
         <span className="cursor-pointer rounded-sm py-3 px-1 text-md font-medium hover:border-b-4 border-red-500">Women</span>
         <span className="cursor-pointer rounded-sm py-3 px-1 text-md font-medium hover:border-b-4 border-red-500">Kids</span>
         <span className="cursor-pointer rounded-sm py-3 px-1 text-md font-medium hover:border-b-4 border-red-500">Home & Living</span>
