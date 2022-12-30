@@ -1,21 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 import SearchIcon from "@mui/icons-material/Search";
 import { Box } from "@mui/system";
 import logo from "../../public/static/Myntra_Logo.png";
 import Image from "next/image";
 import styles from "./Navbar.module.scss"
-
+import Link from "next/link";
 
 
 
 
 const Navbar = () => {
+  const [searchItem,setSearchItem] = useState();
+
   return (
     <Box>
       <div className="bg-white ">
   <div className="border px-6 ">
     <div className="flex justify-between items-center h-20">
 
+{/* toggle button */}
     <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
       <span class="sr-only">Open main menu</span>
       <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
@@ -24,7 +27,9 @@ const Navbar = () => {
       {/* items section */}
       <div className="flex items-center hidden w-full md:flex md:w-auto " id="navbar-default">
 
+        <Link href="/" class="transition duration-300 ease-in-out ">   
         <img className="h-6 w-10 mx-8 text-red-500" src="https://www.freelogovectors.net/wp-content/uploads/2021/02/myntra-logo-freelogovectors.net_.png"/>
+        </Link>
         
         <div className="flex gap-x-8">
         <span className="cursor-pointer rounded-sm py-3 px-1 text-md font-medium">Men</span> 
@@ -39,19 +44,53 @@ const Navbar = () => {
 
       {/* search section */}
       <div className="ml-6  hidden w-full md:flex md:w-auto" >
-        <input type="text" className="from-control w-80  w-full rounded-md border border-[#DDE2E4] px-3 py-2 text-sm" value="" placeholder="Search for products, brands & more"/>
+        <input type="text" className="from-control w-80  w-full rounded-md border border-[#DDE2E4] px-3 py-2 text-sm" value={searchItem} onChange={(e)=> setSearchItem(e.target.value)} placeholder="Search for products, brands & more"/>
       </div>
 
       {/* account section */}
       <div className="ml-2 flex ">
-        <div className=" flex flex-col items-center  cursor-pointer  rounded-md py-2 px-4 hover:bg-gray-100">
+        <div className="group inline-block relative flex flex-col items-center  cursor-pointer  rounded-md py-2 px-4 hover:bg-gray-100">
         <img className="h5 w-5" src="https://cdn-icons-png.flaticon.com/512/1250/1250689.png"/>
-          {/* <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-gray-500" viewBox="0 0 20 20" fill="currentColor">
-            <path d="M4 3a2 2 0 100 4h12a2 2 0 100-4H4z" />
-            <path fill-rule="evenodd" d="M3 8h14v7a2 2 0 01-2 2H5a2 2 0 01-2-2V8zm5 3a1 1 0 011-1h2a1 1 0 110 2H9a1 1 0 01-1-1z" clip-rule="evenodd" />
-          </svg> */}
+         
           <span className="text-sm font-medium">Profile</span>
+
+          <div class="absolute w-72 p-5 shadow-lg hidden text-gray-700 mt-14 z-10 bg-white group-hover:block">
+          <div class="">
+          <div className="text-sm font-semibold">Welcome</div>
+          <div className="text-sm ">To access account and manage orders</div>
+
+          <Link href="/login" class="  transition duration-300 ease-in-out "> <button class="bg-transparent hover:border-red-600 block text-black  py-1 px-2 border border-red-400  rounded">
+              LOGIN / SIGNUP
+            </button>
+            </Link>
+<hr className="my-4" />
+
+
+
+
+
+           <div>
+           <div className="text-sm hover:font-semibold">Orders </div>
+           <div className="text-sm hover:font-semibold">Wishlist </div>
+           <div className="text-sm hover:font-semibold">Gift Cards </div>
+           <div className="text-sm hover:font-semibold">Contact Us </div>
+           <div className="text-sm hover:font-semibold">Myntra Insider </div>
+           </div>
+           
+           <hr className="my-4" />
+
+           <div className="text-sm hover:font-semibold">Myntra Credit </div>
+           <div className="text-sm hover:font-semibold">Coupons </div>
+           <div className="text-sm hover:font-semibold">Saved Cards </div>
+           <div className="text-sm hover:font-semibold">Saved VPA </div>
+            <div className="text-sm hover:font-semibold">Saved Addresses</div>
+          </div>
+          
+         
         </div>
+        </div> 
+      
+
 
         <div className="flex flex-col items-center cursor-pointer   rounded-md py-2 px-4 hover:bg-gray-100">
           <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-gray-500" viewBox="0 0 20 20" fill="currentColor">
@@ -70,11 +109,8 @@ const Navbar = () => {
         </div>
       </div>
 
-     
-      
     </div>
-   
-    
+
   </div>
 </div>
     </Box>
@@ -86,42 +122,3 @@ const Navbar = () => {
 </div> */}
 
 export default Navbar;
-{/* <AppBar position="static" elevation={8}>
-        <Container maxWidth="xl">
-          <Toolbar
-            disableGutters
-            sx={{
-              display: "flex",
-              justifyContent: "space-between",
-              padding: "1rem",
-            }}
-          >
-            <Image src={logo} height={50} />
-
-            <Box display="flex" gap={3}>
-              <Typography variant="h6">Men</Typography>
-              <Typography variant="h6">Women</Typography>
-              <Typography variant="h6">Kids</Typography>
-              <Typography variant="h6">Home & Living </Typography>
-              <Typography variant="h6">Beauty</Typography>
-              <Typography variant="h6">Studio</Typography>
-            </Box>
-
-            <Search>
-              <SearchIconWrapper>
-                <SearchIcon />
-              </SearchIconWrapper>
-              <StyledInputBase
-                placeholder="Search…"
-                inputProps={{ "aria-label": "search" }}
-              />
-            </Search>
-
-            <Box display="flex" gap={3}>
-              <Typography variant="h6">Profile</Typography>
-              <Typography variant="h6">Wishlist</Typography>
-              <Typography variant="h6">Bag</Typography>
-            </Box>
-          </Toolbar>
-        </Container>
-      </AppBar> */}
