@@ -24,12 +24,12 @@ const Navbar = () => {
         <img className="h-6 w-10 mx-8 text-red-500" src="https://www.freelogovectors.net/wp-content/uploads/2021/02/myntra-logo-freelogovectors.net_.png"/>
         
         <div className="flex gap-x-8">
-        <span className="cursor-pointer rounded-sm py-1 px-2 text-sm font-medium hover:bg-gray-100">Men</span>
-        <span className="cursor-pointer rounded-sm py-1 px-2 text-sm font-medium hover:bg-gray-100">Women</span>
-        <span className="cursor-pointer rounded-sm py-1 px-2 text-sm font-medium hover:bg-gray-100">Kids</span>
-        <span className="cursor-pointer rounded-sm py-1 px-2 text-sm font-medium hover:bg-gray-100">Home & Living</span>
-        <span className="cursor-pointer rounded-sm py-1 px-2 text-sm font-medium hover:bg-gray-100">Beauty</span>
-        <span className="cursor-pointer rounded-sm py-1 px-2 text-sm font-medium hover:bg-gray-100">Studio</span>
+        <span className="cursor-pointer rounded-sm py-1 px-2 text-sm font-medium hover:border-b-2 border-red-500">Men</span>
+        <span className="cursor-pointer rounded-sm py-1 px-2 text-sm font-medium hover:border-b-2 border-red-500">Women</span>
+        <span className="cursor-pointer rounded-sm py-1 px-2 text-sm font-medium hover:border-b-2 border-red-500">Kids</span>
+        <span className="cursor-pointer rounded-sm py-1 px-2 text-sm font-medium hover:border-b-2 border-red-500">Home & Living</span>
+        <span className="cursor-pointer rounded-sm py-1 px-2 text-sm font-medium hover:border-b-2 border-red-500">Beauty</span>
+        <span className="cursor-pointer rounded-sm py-1 px-2 text-sm font-medium hover:border-b-2 border-red-500">Studio</span>
       </div>
 
       </div>
