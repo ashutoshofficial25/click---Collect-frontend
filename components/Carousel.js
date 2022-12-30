@@ -7,6 +7,7 @@ import img1 from "../public/static/home-carousel/carouse-home2.png";
 import img2 from "../public/static/home-carousel/carouse-home3.png";
 import img3 from "../public/static/home-carousel/carouse-home4.png";
 import img4 from "../public/static/home-carousel/carouse-home5.png";
+import { Box } from "@mui/material";
 
 const Carousel = () => {
   const settings = {
@@ -19,7 +20,7 @@ const Carousel = () => {
     arrows: false,
   };
   return (
-    <div>
+    <Box mt={5}>
       <Slider {...settings}>
         <Image src={img} />
         <Image src={img1} />
@@ -27,7 +28,7 @@ const Carousel = () => {
         <Image src={img3} />
         <Image src={img4} />
       </Slider>
-    </div>
+    </Box>
   );
 };
 
