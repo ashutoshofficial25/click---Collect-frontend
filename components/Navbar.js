@@ -10,8 +10,8 @@ const Navbar = () => {
   return (
     <Box>
       <div className="bg-white ">
-  <div className="border py-3 px-6">
-    <div className="flex justify-between items-center">
+  <div className="border px-6 ">
+    <div className="flex justify-between items-center h-20">
 
     <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
       <span class="sr-only">Open main menu</span>
@@ -24,12 +24,12 @@ const Navbar = () => {
         <img className="h-6 w-10 mx-8 text-red-500" src="https://www.freelogovectors.net/wp-content/uploads/2021/02/myntra-logo-freelogovectors.net_.png"/>
         
         <div className="flex gap-x-8">
-        <span className="cursor-pointer rounded-sm py-1 px-2 text-sm font-medium hover:border-b-2 border-red-500">Men</span>
-        <span className="cursor-pointer rounded-sm py-1 px-2 text-sm font-medium hover:border-b-2 border-red-500">Women</span>
-        <span className="cursor-pointer rounded-sm py-1 px-2 text-sm font-medium hover:border-b-2 border-red-500">Kids</span>
-        <span className="cursor-pointer rounded-sm py-1 px-2 text-sm font-medium hover:border-b-2 border-red-500">Home & Living</span>
-        <span className="cursor-pointer rounded-sm py-1 px-2 text-sm font-medium hover:border-b-2 border-red-500">Beauty</span>
-        <span className="cursor-pointer rounded-sm py-1 px-2 text-sm font-medium hover:border-b-2 border-red-500">Studio</span>
+        <span className="cursor-pointer rounded-sm py-3 px-1 text-md font-medium hover:border-b-4 border-red-500">Men</span>
+        <span className="cursor-pointer rounded-sm py-3 px-1 text-md font-medium hover:border-b-4 border-red-500">Women</span>
+        <span className="cursor-pointer rounded-sm py-3 px-1 text-md font-medium hover:border-b-4 border-red-500">Kids</span>
+        <span className="cursor-pointer rounded-sm py-3 px-1 text-md font-medium hover:border-b-4 border-red-500">Home & Living</span>
+        <span className="cursor-pointer rounded-sm py-3 px-1 text-md font-medium hover:border-b-4 border-red-500">Beauty</span>
+        <span className="cursor-pointer hidden w-full md:none md:w-auto rounded-sm py-3 px-1 text-md font-medium hover:border-b-4 border-red-500">Studio</span>
       </div>
 
       </div>
