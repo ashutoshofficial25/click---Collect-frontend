@@ -5,11 +5,22 @@ import Image from "next/image";
 import { Box } from "@mui/system";
 
 import Link from "next/link";
+import Head from "next/head";
 
 const VerifyOtp = () => {
   return (
     <Box height="90vh" p={5} sx={{ backgroundColor: "#fcefe8" }}>
-      <Card sx={{ maxWidth: 500, margin: "auto", padding: "60px" }}>
+      <Head>
+        <title>Verify with OTP</title>
+      </Head>
+
+      <Card
+        sx={{
+          maxWidth: 500,
+          margin: "auto",
+          padding: { lg: "60px", sm: "56px", xs: "36px" },
+        }}
+      >
         <CardContent>
           <Image src={verifyOtpImg} height={100} width={100} alt="vetify-otp" />
           <div className="py-3">
