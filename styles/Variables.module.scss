@@ -1,10 +1,10 @@
-$primary-color: #64ff00;
+$primary-color: #ff3f6c;
 
 :export {
   primaryColor: $primary-color;
 }
 
-.hello {
-    background-color: --var(primaryColor);
-    color: red;
+.buttonColor {
+  background-color: --var(primaryColor);
+  color: fff;
 }
