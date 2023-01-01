@@ -10,7 +10,9 @@ export default function Home() {
     <>
       <Carousel />
 
-      <div className="ml-5 px-10 mt-10 text-3xl text-slate-600   font-bold tracking-wide ">DEAL OF THE DAY</div>
+      <div className="ml-0 px-10 mt-28 text-4xl text-gray-700   font-semibold tracking-widest ">
+        DEAL OF THE DAY
+      </div>
     </>
   );
 }
