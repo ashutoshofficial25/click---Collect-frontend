@@ -14,12 +14,12 @@ const login = () => {
   };
 
   return (
-    <Box height="90vh" p={5} sx={{ backgroundColor: "#ffedf1" }}>
+    <Box height="100vh" p={4} sx={{ backgroundColor: "#ffedf1" }}>
       <Head>
         <title>Myntra</title>
       </Head>
 
-      <Card sx={{ maxWidth: 500, margin: "auto" }} elevation={0}>
+      <Card sx={{ maxWidth: 400, margin: "auto" }} elevation={0}>
         <Image src={loginOfferImg} width="620px" height="auto" />
         <CardContent>
           <Box px={4} pt={3}>
@@ -80,11 +80,11 @@ const login = () => {
               </Link>
             </form>
             <div className="mt-4">
-              <span className="font-base text-gray-700" te>
+              <span className="font-sm text-gray-700" te>
                 Having trouble logging in?
               </span>{" "}
-              <Link className="font-semibold text-rose-500" href="#">
-                Get help
+              <Link className=" text-rose-500" href="#">
+                <span className="font-semibold font-sm"> Get help</span>
               </Link>
             </div>
           </Box>
