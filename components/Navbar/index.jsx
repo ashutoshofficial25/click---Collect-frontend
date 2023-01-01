@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import SearchIcon from "@mui/icons-material/Search";
 import { Box } from "@mui/system";
-import logo from "../../public/static/Myntra_Logo.png";
+import logo from "../../public/static/myntra-logo.png";
 import Image from "next/image";
 import styles from "./Navbar.module.scss";
 import Link from "next/link";
@@ -13,7 +13,7 @@ const Navbar = () => {
     <Box>
       <div className="bg-white ">
         <div className="border px-6 ">
-          <div className="flex justify-between items-center h-20 pt-1">
+          <div className="flex justify-between items-center h-18">
             {/* toggle button */}
             <button
               data-collapse-toggle="navbar-default"
@@ -44,40 +44,42 @@ const Navbar = () => {
               id="navbar-default"
             >
               <Link href="/" className="transition duration-300 ease-in-out ">
-                <img
-                  className="h-10 w-15 mx-8 text-red-500"
-                  src="https://www.freelogovectors.net/wp-content/uploads/2021/02/myntra-logo-freelogovectors.net_.png"
+                <Image
+                  height="15"
+                  width="50"
+                  className="mx-8  md:mx-4"
+                  src={logo}
                   alt="logo"
                 />
               </Link>
 
-              <div className="flex gap-x-6">
-                <span className="cursor-pointer text-gray-800  py-3 px-1 text-base font-medium ">
+              <div className="flex gap-x-6 md:gap-x-3">
+                <span className="cursor-pointer text-gray-800  py-7 px-1 text-sm font-medium ">
                   MEN
                 </span>
-                <span className="cursor-pointer text-gray-800 py-3 px-1 text-base font-medium hover:border-b-4 border-red-500">
+                <span className="cursor-pointer text-gray-800 py-7 px-1 text-sm font-medium hover:border-b-4 border-red-500">
                   WOMEN
                 </span>
-                <span className="cursor-pointer text-gray-800 py-3 px-1 text-base font-medium hover:border-b-4 border-red-500">
+                <span className="cursor-pointer text-gray-800 py-7 px-1 text-sm font-medium hover:border-b-4 border-red-500">
                   KIDS
                 </span>
-                <span className="cursor-pointer text-gray-800 py-3 px-1 text-base font-medium hover:border-b-4 border-red-500">
+                <span className="cursor-pointer text-gray-800 py-7 px-1 text-sm font-medium hover:border-b-4 border-red-500">
                   HOME & LIVING
                 </span>
-                <span className="cursor-pointer text-gray-800 py-3 px-1 text-base font-medium hover:border-b-4 border-red-500">
+                <span className="cursor-pointer text-gray-800 py-7 px-1 text-sm font-medium hover:border-b-4 border-red-500">
                   BEAUTY
                 </span>
-                <span className="cursor-pointer hidden w-full md:block md:w-auto text-gray-800 py-3 px-1 text-base font-medium hover:border-b-4 border-red-500">
+                <span className="cursor-pointer hidden w-full md:block md:w-auto text-gray-800 py-7 px-1 text-sm font-medium hover:border-b-4 border-red-500">
                   STUDIO
                 </span>
               </div>
             </div>
 
             {/* search section */}
-            <div className="ml-6  hidden w-full md:flex md:w-auto">
+            <div className="ml-6  hidden md:block ">
               <input
                 type="text"
-                className="from-control w-80 bg-gray-50  w-full rounded-md border border-[#DDE2E4] px-3 py-2 text-sm outline-none focus:border-gray-600"
+                className="from-control  md:w-80 bg-gray-50  w-full rounded-md border border-[#DDE2E4] px-3 py-2 text-sm outline-none focus:border-gray-600"
                 value={searchItem}
                 onChange={(e) => setSearchItem(e.target.value)}
                 placeholder="Search for products, brands & more"
@@ -86,15 +88,15 @@ const Navbar = () => {
 
             {/* account section */}
             <div className="ml-2 flex ">
-              <div className="group inline-block relative flex flex-col items-center  cursor-pointer  rounded-md py-2 px-4 hover:bg-gray-100">
+              <div className="group inline-block relative flex flex-col items-center cursor-pointer  px-2 py-6 hover:border-b-4 border-red-500">
                 <img
-                  className="h5 w-5"
+                  className="h3 w-4"
                   src="https://cdn-icons-png.flaticon.com/512/1250/1250689.png"
                 />
 
-                <span className="text-sm font-medium">Profile</span>
+                <span className="text-xs font-medium">Profile</span>
 
-                <div className="absolute w-72 p-5 shadow-lg hidden text-gray-700 mt-14 z-10 bg-white group-hover:block">
+                <div className="absolute w-72 p-5 shadow-lg hidden text-gray-700 mt-16 z-10 bg-white group-hover:block">
                   <div className="">
                     <div className="text-sm font-semibold">Welcome</div>
                     <div className="text-sm ">
@@ -152,32 +154,24 @@ const Navbar = () => {
                 </div>
               </div>
 
-              <div className="flex flex-col items-center cursor-pointer   rounded-md py-2 px-4 hover:bg-gray-100">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-5 w-5 text-gray-500"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"
-                    clip-rule="evenodd"
-                  />
-                </svg>
-                <span className="text-sm font-medium">Wishlist</span>
+              <div className="flex flex-col items-center cursor-pointer   rounded-md py-6 px-2 ">
+                <img
+                  className="h3 w-4"
+                  src="https://cdn-icons-png.flaticon.com/512/445/445140.png"
+                />
+                <span className="text-xs font-medium">Wishlist</span>
               </div>
 
-              <div className="flex flex-col items-center cursor-pointer   rounded-md py-2 px-4 hover:bg-gray-100">
+              <div className="flex flex-col items-center cursor-pointer   rounded-md py-6 px-2 ">
                 <div className="relative">
                   <img
-                    className="h5 w-5"
+                    className="h3 w-4"
                     src="https://img.icons8.com/fluency-systems-regular/48/null/shopping-bag--v1.png"
                   />
 
                   {/* <span className="absolute -top-2 -right-2 flex h-4 w-4 items-center justify-center rounded-full bg-red-500 p-2 text-xs text-white">3</span> */}
                 </div>
-                <span className="text-sm font-medium">Bag</span>
+                <span className="text-xs font-medium">Bag</span>
               </div>
             </div>
           </div>
