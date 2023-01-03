@@ -38,169 +38,169 @@ export default function Home() {
       <Carousel />
       {/* Deals of the day */}
       <div>
-        <div className="ml-0 px-8 mt-20 mb-14 text-3xl text-gray-700 font-semibold tracking-widest ">
+        <div className="ml-0 px-8 max-md:mt-10 max-md:mb-7 max-md:text-xl mt-20 mb-14  text-3xl  text-gray-700 font-semibold tracking-widest ">
           DEAL OF THE DAY
         </div>
         <div className="flex max-md:flex-wrap justify-center max-md:gap-2 w-full">
           <Image
             src={dealOne}
             alt="deal-of-the-day"
-            height={235}
-            width="auto"
+            width={160}
+            height="auto"
           />
           <Image
             src={dealTwo}
             alt="deal-of-the-day"
-            height={235}
-            width="auto"
+            width={160}
+            height="auto"
           />
           <Image
             src={dealThree}
             alt="deal-of-the-day"
-            height={235}
-            width="auto"
+            width={160}
+            height="auto"
           />
           <Image
             src={dealFour}
             alt="deal-of-the-day"
-            height={235}
-            width="auto"
+            width={160}
+            height="auto"
           />
           <Image
             src={dealFive}
             alt="deal-of-the-day"
-            height={235}
-            width="auto"
+            width={160}
+            height="auto"
           />
           <Image
             src={dealSix}
             alt="deal-of-the-day"
-            height={235}
-            width="auto"
+            width={160}
+            height="auto"
           />
           <Image
             src={dealSeven}
             alt="deal-of-the-day"
-            height={235}
-            width="auto"
+            width={160}
+            height="auto"
           />
           <Image
             src={dealEight}
             alt="deal-of-the-day"
-            height={235}
-            width="auto"
+            width={160}
+            height="auto"
           />
         </div>
       </div>
       {/* Exclusive Brands */}
       <div>
-        <div className="ml-0 px-8 m-14 text-3xl text-gray-700 font-semibold tracking-widest ">
+        <div className="ml-0 px-8 m-14 max-md:mt-10 max-md:mb-7 max-md:text-xl text-3xl text-gray-700 font-semibold tracking-widest ">
           BEST OF MYNTRA EXCLUSIVE BRANDS
         </div>
         <div className="flex gap-1 flex-wrap justify-center  w-full">
           <Image
             src={exclusiveOne}
             alt="deal-of-the-day"
-            height={200}
-            width="auto"
+            width={155}
+            height="auto"
           />
           <Image
             src={exclusiveTwo}
             alt="deal-of-the-day"
-            height={200}
-            width="auto"
+            width={155}
+            height="auto"
           />
           <Image
             src={exclusiveThree}
             alt="deal-of-the-day"
-            height={200}
-            width="auto"
+            width={155}
+            height="auto"
           />
           <Image
             src={exclusiveFour}
             alt="deal-of-the-day"
-            height={200}
-            width="auto"
+            width={155}
+            height="auto"
           />
           <Image
             src={exclusiveFive}
             alt="deal-of-the-day"
-            height={200}
-            width="auto"
+            width={155}
+            height="auto"
           />
           <Image
             src={exclusiveSix}
             alt="deal-of-the-day"
-            height={200}
-            width="auto"
+            width={155}
+            height="auto"
           />
           <Image
             src={exclusiveSeven}
             alt="deal-of-the-day"
-            height={200}
-            width="auto"
+            width={155}
+            height="auto"
           />
           <Image
             src={exclusiveEight}
             alt="deal-of-the-day"
-            height={200}
-            width="auto"
+            width={155}
+            height="auto"
           />
 
           <Image
             src={exclusiveOne}
             alt="deal-of-the-day"
-            height={200}
-            width="auto"
+            width={155}
+            height="auto"
           />
           <Image
             src={exclusiveOne}
             alt="deal-of-the-day"
-            height={200}
-            width="auto"
+            width={155}
+            height="auto"
           />
           <Image
             src={exclusiveOne}
             alt="deal-of-the-day"
-            height={200}
-            width="auto"
+            width={155}
+            height="auto"
           />
           <Image
             src={exclusiveOne}
             alt="deal-of-the-day"
-            height={200}
-            width="auto"
+            width={155}
+            height="auto"
           />
           <Image
             src={exclusiveOne}
             alt="deal-of-the-day"
-            height={200}
-            width="auto"
+            width={155}
+            height="auto"
           />
           <Image
             src={exclusiveOne}
             alt="deal-of-the-day"
-            height={200}
-            width="auto"
+            width={155}
+            height="auto"
           />
           <Image
             src={exclusiveOne}
             alt="deal-of-the-day"
-            height={200}
-            width="auto"
+            width={155}
+            height="auto"
           />
           <Image
             src={exclusiveOne}
             alt="deal-of-the-day"
-            height={200}
-            width="auto"
+            width={155}
+            height="auto"
           />
         </div>
       </div>
 
       {/* Top Pics */}
       <div>
-        <div className="ml-0 px-8 m-14 text-3xl text-gray-700 font-semibold tracking-widest ">
+        <div className="ml-0 max-md:mt-10 max-md:mb-7 max-md:text-xl px-8 m-14 text-3xl text-gray-700 font-semibold tracking-widest ">
           TOP PICKS
         </div>
         <div className="flex flex-wrap justify-center  w-full">
