@@ -53,22 +53,22 @@ const Navbar = () => {
             </Link>
 
             <div className="flex gap-x-6 md:gap-x-3">
-              <span className="cursor-pointer text-gray-800  py-7 px-1 text-sm font-medium ">
+              <span className="cursor-pointer text-gray-800  py-7 px-1 text-sm border-b-4 border-white font-medium hover:border-b-4 hover:border-red-400">
                 MEN
               </span>
-              <span className="cursor-pointer text-gray-800 py-7 px-1 text-sm font-medium hover:border-b-4 border-red-500">
+              <span className="cursor-pointer text-gray-800 py-7 px-1 text-sm font-medium border-b-4 border-white hover:border-b-4 hover:border-rose-500">
                 WOMEN
               </span>
-              <span className="cursor-pointer text-gray-800 py-7 px-1 text-sm font-medium hover:border-b-4 border-red-500">
+              <span className="cursor-pointer text-gray-800 py-7 px-1 text-sm font-medium border-b-4 border-white hover:border-b-4 hover:border-orange-500">
                 KIDS
               </span>
-              <span className="cursor-pointer text-gray-800 py-7 px-1 text-sm font-medium hover:border-b-4 border-red-500">
+              <span className="cursor-pointer text-gray-800 py-7 px-1 text-sm font-medium border-b-4 border-white hover:border-b-4 hover:border-yellow-500">
                 HOME & LIVING
               </span>
-              <span className="cursor-pointer text-gray-800 py-7 px-1 text-sm font-medium hover:border-b-4 border-red-500">
+              <span className="cursor-pointer text-gray-800 py-7 px-1 text-sm font-medium border-b-4 border-white hover:border-b-4 hover:border-green-500">
                 BEAUTY
               </span>
-              <span className="cursor-pointer hidden w-full md:block md:w-auto text-gray-800 py-7 px-1 text-sm font-medium hover:border-b-4 border-red-500">
+              <span className="cursor-pointer hidden w-full md:block md:w-auto text-gray-800 py-7 px-1 text-sm font-medium border-b-4 border-white hover:border-b-4 hover:border-pink-500">
                 STUDIO
               </span>
             </div>
@@ -87,7 +87,7 @@ const Navbar = () => {
 
           {/* account section */}
           <div className="ml-2 flex ">
-            <div className="group inline-block relative flex flex-col items-center cursor-pointer  px-2 py-6 hover:border-b-4 border-red-500">
+            <div className="group inline-block relative flex flex-col items-center cursor-pointer  px-2 py-6 border-b-4 border-white hover:border-b-4 hover:border-red-500">
               <img
                 className="h3 w-4"
                 src="https://cdn-icons-png.flaticon.com/512/1250/1250689.png"

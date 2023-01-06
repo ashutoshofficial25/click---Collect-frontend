@@ -31,11 +31,17 @@ import topFour from "../public/static/top-pics/top-pics-4.png";
 import topFive from "../public/static/top-pics/top-pics-5.png";
 import topSix from "../public/static/top-pics/top-pics-6.png";
 import topSeven from "../public/static/top-pics/top-pics-7.png";
+import HeroOffer from "../components/HeroOffer";
 
 export default function Home() {
   return (
     <>
       <Carousel />
+
+      {/* Offer section | according to seassion */}
+
+      <HeroOffer />
+
       {/* Deals of the day */}
       <div>
         <div className="ml-0 px-8 max-md:mt-10 max-md:mb-7 max-md:text-xl mt-20 mb-14  text-3xl  text-gray-700 font-semibold tracking-widest ">
