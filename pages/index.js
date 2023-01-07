@@ -448,11 +448,170 @@ export default function Home() {
 
       {/* SLASHED PRICES */}
 
+      <div>
+        <div className="ml-0 px-8 max-md:mt-10 max-md:mb-7 max-md:text-xl mt-20 mb-14  text-3xl  text-gray-700 font-semibold tracking-widest ">
+          BRANDS AT SLASHED PRICES
+        </div>
+        <div className="flex flex-wrap justify-center  w-full">
+          <Image
+            src="https://firebasestorage.googleapis.com/v0/b/myntra-82a2c.appspot.com/o/assets%2Fbrands-slased-price%2Fbrands-slased-price1.png?alt=media&token=5f8ce27b-555e-49bc-977a-d6581fa9e1f2"
+            alt="deal-of-the-day"
+            width={200}
+            className="min-[600px]:max-[920px]:w-32 min-[200px]:max-[600px]:w-28  "
+            height="150"
+            loading="lazy"
+          />
+          <Image
+            src="https://firebasestorage.googleapis.com/v0/b/myntra-82a2c.appspot.com/o/assets%2Fbrands-slased-price%2Fbrands-slased-price2.png?alt=media&token=fc21d814-8114-4cec-8ebe-ec5892e68eff"
+            alt="deal-of-the-day"
+            width={200}
+            className="min-[600px]:max-[920px]:w-32 min-[200px]:max-[600px]:w-28  "
+            height="150"
+            loading="lazy"
+          />
+          <Image
+            src="https://firebasestorage.googleapis.com/v0/b/myntra-82a2c.appspot.com/o/assets%2Fbrands-slased-price%2Fbrands-slased-price3.png?alt=media&token=94fd1c30-c83a-4e14-8840-5757e91945c2"
+            alt="deal-of-the-day"
+            width={200}
+            className="min-[600px]:max-[920px]:w-32 min-[200px]:max-[600px]:w-28  "
+            height="150"
+            loading="lazy"
+          />
+          <Image
+            src="https://firebasestorage.googleapis.com/v0/b/myntra-82a2c.appspot.com/o/assets%2Fbrands-slased-price%2Fbrands-slased-price4.png?alt=media&token=ef890f99-b60b-4a80-a25e-d02b0e9dc347"
+            alt="deal-of-the-day"
+            width={200}
+            className="min-[600px]:max-[920px]:w-32 min-[200px]:max-[600px]:w-28  "
+            height="150"
+            loading="lazy"
+          />
+          <Image
+            src="https://firebasestorage.googleapis.com/v0/b/myntra-82a2c.appspot.com/o/assets%2Fbrands-slased-price%2Fbrands-slased-price5.png?alt=media&token=1ef2ac0e-b165-437c-bba6-dbfb5a3fe2c2"
+            alt="deal-of-the-day"
+            width={200}
+            className="min-[600px]:max-[920px]:w-32 min-[200px]:max-[600px]:w-28  "
+            height="150"
+            loading="lazy"
+          />
+          <Image
+            src="https://firebasestorage.googleapis.com/v0/b/myntra-82a2c.appspot.com/o/assets%2Fbrands-slased-price%2Fbrands-slased-price6.png?alt=media&token=5815fcf7-6e62-4090-9c23-830719fdba8b"
+            alt="deal-of-the-day"
+            width={200}
+            className="min-[600px]:max-[920px]:w-32 min-[200px]:max-[600px]:w-28  "
+            height="150"
+            loading="lazy"
+          />
+          <Image
+            src="https://firebasestorage.googleapis.com/v0/b/myntra-82a2c.appspot.com/o/assets%2Fbrands-slased-price%2Fbrands-slased-price7.png?alt=media&token=929f3c81-648e-4b5f-94f3-6c4d7051e58e"
+            alt="deal-of-the-day"
+            width={200}
+            className="min-[600px]:max-[920px]:w-32 min-[200px]:max-[600px]:w-28  "
+            height="150"
+            loading="lazy"
+          />
+
+          {/* 2nd  */}
+
+          <Image
+            src="https://firebasestorage.googleapis.com/v0/b/myntra-82a2c.appspot.com/o/assets%2Fbrands-slased-price%2Fbrands-slased-price8.png?alt=media&token=cf45d83b-41ce-49ce-b881-871abd732c1d"
+            alt="deal-of-the-day"
+            width={200}
+            className="min-[600px]:max-[920px]:w-32 min-[200px]:max-[600px]:w-28  "
+            height="150"
+            loading="lazy"
+          />
+          <Image
+            src="https://firebasestorage.googleapis.com/v0/b/myntra-82a2c.appspot.com/o/assets%2Fbrands-slased-price%2Fbrands-slased-price9.png?alt=media&token=8e9dd2ad-9412-437c-83d0-8aa5e690357e"
+            alt="deal-of-the-day"
+            width={200}
+            className="min-[600px]:max-[920px]:w-32 min-[200px]:max-[600px]:w-28  "
+            height="150"
+            loading="lazy"
+          />
+          <Image
+            src="https://firebasestorage.googleapis.com/v0/b/myntra-82a2c.appspot.com/o/assets%2Fbrands-slased-price%2Fbrands-slased-price10.png?alt=media&token=5843118e-0279-4e89-a35c-a5ffd2418c7f"
+            alt="deal-of-the-day"
+            width={200}
+            className="min-[600px]:max-[920px]:w-32 min-[200px]:max-[600px]:w-28  "
+            height="150"
+            loading="lazy"
+          />
+          <Image
+            src="https://firebasestorage.googleapis.com/v0/b/myntra-82a2c.appspot.com/o/assets%2Fbrands-slased-price%2Fbrands-slased-price12.png?alt=media&token=e108d546-9a94-414d-9701-2133b85f4746"
+            alt="deal-of-the-day"
+            width={200}
+            className="min-[600px]:max-[920px]:w-32 min-[200px]:max-[600px]:w-28  "
+            height="150"
+            loading="lazy"
+          />
+          <Image
+            src="https://firebasestorage.googleapis.com/v0/b/myntra-82a2c.appspot.com/o/assets%2Fbrands-slased-price%2Fbrands-slased-price13.png?alt=media&token=47b48054-f35e-4cf3-93f8-724a7d2991b8"
+            alt="deal-of-the-day"
+            width={200}
+            className="min-[600px]:max-[920px]:w-32 min-[200px]:max-[600px]:w-28  "
+            height="150"
+            loading="lazy"
+          />
+          <Image
+            src="https://firebasestorage.googleapis.com/v0/b/myntra-82a2c.appspot.com/o/assets%2Fbrands-slased-price%2Fbrands-slased-price11.png?alt=media&token=d9938494-2f51-4721-8797-fe072cf132d9"
+            alt="deal-of-the-day"
+            width={200}
+            className="min-[600px]:max-[920px]:w-32 min-[200px]:max-[600px]:w-28  "
+            height="150"
+            loading="lazy"
+          />
+          <Image
+            src="https://firebasestorage.googleapis.com/v0/b/myntra-82a2c.appspot.com/o/assets%2Fbrands-slased-price%2Fbrands-slased-price14.png?alt=media&token=9742bf84-5cde-4ef2-a716-e3512c39e8ab"
+            alt="deal-of-the-day"
+            width={200}
+            className="min-[600px]:max-[920px]:w-32 min-[200px]:max-[600px]:w-28  "
+            height="150"
+            loading="lazy"
+          />
+        </div>
+      </div>
+
       {/* best buys */}
 
       {/* myntra luxe */}
 
       {/* Gifting card */}
+
+      <div>
+        <div className="ml-0 px-8 m-14 max-md:mt-10 max-md:mb-7 max-md:text-xl text-3xl text-gray-700 font-semibold tracking-widest ">
+          GIFTING CARDS
+        </div>
+        <div className="flex gap-1 flex-wrap justify-center  w-full">
+          <Image
+            src="https://firebasestorage.googleapis.com/v0/b/myntra-82a2c.appspot.com/o/assets%2Fgift-card%2Fgift-card-1.png?alt=media&token=545849ce-5fc6-4a9f-b412-86c56cf64ae6"
+            alt="gift-card"
+            className="min-[600px]:max-[920px]:w-32 min-[200px]:max-[600px]:w-28  "
+            width={310}
+            height="150"
+          />
+          <Image
+            src="https://firebasestorage.googleapis.com/v0/b/myntra-82a2c.appspot.com/o/assets%2Fgift-card%2Fgift-card-2.png?alt=media&token=57c3e973-9573-43a0-9355-432d3559e131"
+            alt="gift-card"
+            className="min-[600px]:max-[920px]:w-32 min-[200px]:max-[600px]:w-28  "
+            width={310}
+            height="150"
+          />
+          <Image
+            src="https://firebasestorage.googleapis.com/v0/b/myntra-82a2c.appspot.com/o/assets%2Fgift-card%2Fgift-card-3.png?alt=media&token=6c36681f-43ed-4279-bcc2-8e48d1a13853"
+            alt="gift-card"
+            className="min-[600px]:max-[920px]:w-32 min-[200px]:max-[600px]:w-28  "
+            width={310}
+            height="150"
+          />
+          <Image
+            src="https://firebasestorage.googleapis.com/v0/b/myntra-82a2c.appspot.com/o/assets%2Fgift-card%2Fgift-card-4.png?alt=media&token=6e9df480-f06c-4042-aa80-f50d85655a8e"
+            alt="gift-card"
+            className="min-[600px]:max-[920px]:w-32 min-[200px]:max-[600px]:w-28  "
+            width={310}
+            height="150"
+          />
+        </div>
+      </div>
 
       {/* Spring summber */}
 
