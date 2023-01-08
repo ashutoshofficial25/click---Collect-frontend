@@ -157,7 +157,10 @@ const Navbar = () => {
               <span className="text-xs font-medium">Wishlist</span>
             </div>
 
-            <div className="flex flex-col items-center cursor-pointer   rounded-md py-6 px-2 ">
+            <Link
+              href="/checkout/cart"
+              className="flex flex-col items-center cursor-pointer   rounded-md py-6 px-2 "
+            >
               <div className="relative">
                 <img
                   className="h3 w-4"
@@ -169,7 +172,7 @@ const Navbar = () => {
                 </span>
               </div>
               <span className="text-xs font-medium">Bag</span>
-            </div>
+            </Link>
           </div>
         </div>
       </div>
