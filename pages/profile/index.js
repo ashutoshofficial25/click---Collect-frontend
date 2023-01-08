@@ -1,6 +1,9 @@
 import { Container } from "@mui/material";
 import Link from "next/link";
 import React, { useState } from "react";
+import Coupons from "./Coupons";
+import MynCash from "./MynCash";
+import MyntraCredit from "./MyntraCredit";
 import OrderReturn from "./OrderReturn";
 import Overview from "./Overview";
 import ProfileDetail from "./ProfileDetail";
@@ -40,9 +43,24 @@ const Profile = () => {
 
           <ul>
             <span className="text-gray-500">CREDITS</span>
-            <li>Coupons</li>
-            <li>Myntra Credit</li>
-            <li>MynCash</li>
+            <li
+              className="hover:text-green-700 hover:font-bold font-medium text-sm cursor-pointer"
+              onClick={() => setContent("Coupons")}
+            >
+              Coupons
+            </li>
+            <li
+              className="hover:text-green-700 hover:font-bold font-medium text-sm cursor-pointer"
+              onClick={() => setContent("MyntraCredit")}
+            >
+              Myntra Credit
+            </li>
+            <li
+              className="hover:text-green-700 hover:font-bold font-medium text-sm cursor-pointer"
+              onClick={() => setContent("MynCash")}
+            >
+              MynCash
+            </li>
           </ul>
 
           <hr className="my-5" />
@@ -74,6 +92,9 @@ const Profile = () => {
           {content === "Profile" && <ProfileDetail />}
           {content === "Overview" && <Overview />}
           {content === "OrderReturn" && <OrderReturn />}
+          {content === "Coupons" && <Coupons />}
+          {content === "MyntraCredit" && <MyntraCredit />}
+          {content === "MynCash" && <MynCash />}
         </div>
       </div>
     </Container>
