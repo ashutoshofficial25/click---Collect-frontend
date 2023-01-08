@@ -90,7 +90,7 @@ const Profile = () => {
         </div>
         <div className="left-section w-full border border-gray-400 p-4 m-4 max-[920px]:p-1 max-[920px]:m-2">
           {content === "Profile" && <ProfileDetail />}
-          {content === "Overview" && <Overview />}
+          {content === "Overview" && <Overview setContent={setContent} />}
           {content === "OrderReturn" && <OrderReturn />}
           {content === "Coupons" && <Coupons />}
           {content === "MyntraCredit" && <MyntraCredit />}
