@@ -168,7 +168,7 @@ const Navbar = () => {
                 />
 
                 <span className="absolute -top-2 -right-2 flex h-4 w-4 items-center justify-center rounded-full bg-red-500 p-2 text-xs text-white">
-                  3
+                  2
                 </span>
               </div>
               <span className="text-xs font-medium">Bag</span>
