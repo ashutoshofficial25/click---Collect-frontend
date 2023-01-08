@@ -164,7 +164,9 @@ const Navbar = () => {
                   src="https://img.icons8.com/fluency-systems-regular/48/null/shopping-bag--v1.png"
                 />
 
-                {/* <span className="absolute -top-2 -right-2 flex h-4 w-4 items-center justify-center rounded-full bg-red-500 p-2 text-xs text-white">3</span> */}
+                <span className="absolute -top-2 -right-2 flex h-4 w-4 items-center justify-center rounded-full bg-red-500 p-2 text-xs text-white">
+                  3
+                </span>
               </div>
               <span className="text-xs font-medium">Bag</span>
             </div>
