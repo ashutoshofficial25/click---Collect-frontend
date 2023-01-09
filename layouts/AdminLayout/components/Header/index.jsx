@@ -1,76 +1,59 @@
-// ** MUI Imports
-import Box from '@mui/material/Box'
-import TextField from '@mui/material/TextField'
-import IconButton from '@mui/material/IconButton'
-import useMediaQuery from '@mui/material/useMediaQuery'
-import InputAdornment from '@mui/material/InputAdornment'
+import PropTypes from "prop-types";
+import { FiMenu } from "react-icons/fi";
+import { FiLogOut as LogOutIcon } from "react-icons/fi";
+import Link from "next/link";
+import {
+  AppBar,
+  Badge,
+  Box,
+  Hidden,
+  IconButton,
+  Toolbar,
+  Typography,
+} from "@mui/material";
+import logo from "../../../../public/static/myntra-logo.png";
+import Image from "next/image";
 
-// ** Icons Imports
-import MenuIcon from '@mui/icons-material/Menu'
-import ManageSearchIcon from '@mui/icons-material/ManageSearch';
-
-// ** Type Import
-
-// ** Components
-// import ModeToggler from 'src/@core/layouts/components/shared-components/ModeToggler'
-// import UserDropdown from 'src/@core/layouts/components/shared-components/UserDropdown'
-// import NotificationDropdown from 'src/@core/layouts/components/shared-components/NotificationDropdown'
-
-
-
-const Header = (props) => {
-  // ** Props
-  const { hidden, settings, saveSettings, toggleNavVisibility } = props
-
-  // ** Hook
-
-
+const Header = ({ className, onMobileNavOpen, ...rest }) => {
   return (
-    <Box sx={{ width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-      <Box className='actions-left' sx={{ mr: 2, display: 'flex', alignItems: 'center' }}>
-        {hidden ? (
-          <IconButton
-            color='inherit'
-            // onClick={toggleNavVisibility}
-            // sx={{ ml: -2.75, ...(hiddenSm ? {} : { mr: 3.5 }) }}
-          >
-            <MenuIcon />
-          </IconButton>
-        ) : null}
-        <TextField
-          size='small'
-          sx={{ '& .MuiOutlinedInput-root': { borderRadius: 4 } }}
-          InputProps={{
-            startAdornment: (
-              <InputAdornment position='start'>
-                <ManageSearchIcon fontSize='small' />
-              </InputAdornment>
-            )
-          }}
-        />
-      </Box>
-      <Box className='actions-right' sx={{ display: 'flex', alignItems: 'center' }}>
-        { (
-          <Box
-            component='a'
-            target='_blank'
-            rel='noreferrer'
-            sx={{ mr: 4, display: 'flex' }}
-            href='https://github.com/themeselection/materio-mui-react-nextjs-admin-template-free'
-          >
-            <img
-              height={24}
-              alt='github stars'
-              src='https://img.shields.io/github/stars/themeselection/materio-mui-react-nextjs-admin-template-free?style=social'
-            />
+    <AppBar className="bg-rose-500" elevation={0} {...rest}>
+      <Toolbar>
+        <Link href="/admin" className="flex">
+          <Image
+            height="15"
+            width="50"
+            className="mx-8  md:mx-4"
+            src={logo}
+            alt="logo"
+          />
+          <Box ml={2}>
+            <Typography variant="h4" noWrap>
+              Myntra Admin
+            </Typography>
           </Box>
-        )}
-        {/* <ModeToggler settings={settings} saveSettings={saveSettings} />
-        <NotificationDropdown />
-        <UserDropdown /> */}
-      </Box>
-    </Box>
-  )
-}
+        </Link>
+        <Box flexGrow={1} />
+        <Hidden mdDown>
+          <IconButton color="inherit" aria-label="logout">
+            <Link href="/logout">
+              <LogOutIcon size={20} />
+              <Typography varient="h6">Logout</Typography>
+            </Link>
+          </IconButton>
+        </Hidden>
+        <Hidden lgUp>
+          <IconButton color="inherit" onClick={onMobileNavOpen}>
+            <FiMenu />
+          </IconButton>
+        </Hidden>
+      </Toolbar>
+    </AppBar>
+  );
+};
 
-export default Header
+Header.propTypes = {
+  className: PropTypes.string,
+  onMobileNavOpen: PropTypes.func,
+};
+
+export default Header;
