@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import OverviewCards from "./OverviewCards";
+import {OverviewCards} from ".";
 
 const overviewData = [
   {
@@ -43,7 +43,7 @@ const overviewData = [
     title: "Addresses",
     src: "https://firebasestorage.googleapis.com/v0/b/myntra-82a2c.appspot.com/o/logos%2Fprofile-address.png?alt=media&token=ff89b688-350b-4b18-8cd4-3e5bc6c0d825",
     subtitle: "Save your address for hassle free checkout",
-    content: "Address",
+    content: "Addresses",
   },
   {
     title: "Coupons",
