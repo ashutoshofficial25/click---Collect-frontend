@@ -17,7 +17,8 @@ export default function App({ Component, pageProps }) {
         <Fragment>
           <Head>
             <title>
-              Online Shopping for Women, Men, Kids Fashion & Lifestyle - Myntra
+              Online Shopping for Women, Men, Kids Fashion & Lifestyle - Click &
+              Collect
             </title>
           </Head>
           <Navbar />

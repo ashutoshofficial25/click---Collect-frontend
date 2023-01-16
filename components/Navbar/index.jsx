@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import SearchIcon from "@mui/icons-material/Search";
 import { Box } from "@mui/system";
 import logo from "../../public/static/myntra-logo.png";
+import ecomlogo from "../../public/static/Ecomm-Logo.png";
 import Image from "next/image";
 import styles from "./Navbar.module.scss";
 import Link from "next/link";
@@ -45,9 +46,9 @@ const Navbar = () => {
             <Link href="/" className="transition duration-300 ease-in-out ">
               <Image
                 height="15"
-                width="50"
+                width="100"
                 className="mx-8  md:mx-4"
-                src={logo}
+                src={ecomlogo}
                 alt="logo"
               />
             </Link>

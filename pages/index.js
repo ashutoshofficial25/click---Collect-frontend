@@ -101,7 +101,8 @@ export default function Home() {
       {/* Exclusive Brands */}
       <div>
         <div className="ml-0 px-8 m-14 max-md:mt-10 max-md:mb-7 max-md:text-xl text-3xl text-gray-700 font-semibold tracking-widest ">
-          BEST OF MYNTRA EXCLUSIVE BRANDS
+          BEST OF <span className="text-rose-500">CLICK & COLLECT</span>{" "}
+          EXCLUSIVE BRANDS
         </div>
         <div className="flex gap-1 flex-wrap justify-center  w-full">
           <Image
