@@ -45,27 +45,35 @@ const Products = () => {
         <span className="text-gray-500">{products.length} Items </span>
       </div>
       <div className="flex w-full">
-        <div className="left-section w-64">
+        <div className="left-section w-64 pl-10">
           <p className="text-basic font-bold">FILTERS</p>
 
           <hr className="my-5" />
 
           <ul>
             <input type="radio" name="filter" id="Men" />
-            <label htmlFor="Men">Men</label>
+            <label className="ml-2" htmlFor="Men">
+              Men
+            </label>
 
             <br />
 
             <input type="radio" name="filter" id="Women" />
-            <label htmlFor="Women">Women</label>
+            <label className="ml-2" htmlFor="Women">
+              Women
+            </label>
             <br />
 
             <input type="radio" name="filter" id="Boys" />
-            <label htmlFor="Boys">Boys</label>
+            <label className="ml-2" htmlFor="Boys">
+              Boys
+            </label>
             <br />
 
             <input type="radio" name="filter" id="Girls" />
-            <label htmlFor="Girls">Girls</label>
+            <label className="ml-2" htmlFor="Girls">
+              Girls
+            </label>
           </ul>
 
           <hr className="my-5" />
@@ -77,7 +85,7 @@ const Products = () => {
 
           <hr className="my-5" />
 
-          <div className="flex flex-wrap justify-between p-7 ml-5">
+          <div className="flex flex-wrap justify-between p-7 ml-5 bg-gray-100">
             {products.map((product) => (
               <div
                 key={product.id}
