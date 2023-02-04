@@ -14,9 +14,9 @@ import {
 import logo from "../../../../public/static/myntra-logo.png";
 import Image from "next/image";
 
-const Header = ({ className, onMobileNavOpen, ...rest }) => {
+const Header = ({ onMobileNavOpen, ...rest }) => {
   return (
-    <AppBar className="bg-rose-500" elevation={0} {...rest}>
+    <AppBar className="bg-rose-500 z-10" elevation={0} {...rest}>
       <Toolbar>
         <Link href="/admin" className="flex">
           <Image
@@ -28,7 +28,7 @@ const Header = ({ className, onMobileNavOpen, ...rest }) => {
           />
           <Box ml={2}>
             <Typography variant="h4" noWrap>
-              Myntra Admin
+              Click & Collect Admin
             </Typography>
           </Box>
         </Link>

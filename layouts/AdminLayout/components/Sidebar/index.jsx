@@ -106,7 +106,11 @@ const Sidebar = ({ onMobileClose, openMobile }) => {
   const content = (
     <Box height="100%" display="flex" flexDirection="column">
       <Box alignItems="center" display="flex" flexDirection="column" p={2}>
-        <Avatar src={user.avatar} to="/app/account" />
+        <Avatar
+          style={{ cursor: "pointer", width: 64, height: 64 }}
+          src={user.avatar}
+          to="/app/account"
+        />
         <Typography color="textPrimary" variant="h5">
           {user.name}
         </Typography>
@@ -128,26 +132,6 @@ const Sidebar = ({ onMobileClose, openMobile }) => {
         </List>
       </Box>
       <Box flexGrow={1} />
-      {/*
-         <Box p={2} m={2} bgcolor="background.dark">
-            <Typography align="center" gutterBottom variant="h4">
-               Need more?
-            </Typography>
-            <Typography align="center" variant="body2">
-               Upgrade to PRO version and access 20 more screens
-            </Typography>
-            <Box display="flex" justifyContent="center" mt={2}>
-               <Button
-                  color="primary"
-                  component="a"
-                  href="https://react-material-kit.devias.io"
-                  variant="contained"
-               >
-                  See PRO version
-               </Button>
-            </Box>
-         </Box>
-         */}
     </Box>
   );
 
@@ -156,6 +140,7 @@ const Sidebar = ({ onMobileClose, openMobile }) => {
       <Hidden lgUp>
         <Drawer
           anchor="left"
+          style={{ width: 256 }}
           onClose={onMobileClose}
           open={openMobile}
           variant="temporary"
@@ -164,7 +149,12 @@ const Sidebar = ({ onMobileClose, openMobile }) => {
         </Drawer>
       </Hidden>
       <Hidden mdDown>
-        <Drawer anchor="left" open variant="persistent">
+        <Drawer
+          anchor="left"
+          style={{ width: 256, top: 64, height: "calc(100% - 64px)" }}
+          open
+          variant="persistent"
+        >
           {content}
         </Drawer>
       </Hidden>
