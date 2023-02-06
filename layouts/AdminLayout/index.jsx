@@ -6,12 +6,16 @@ const AdminLayout = ({ children }) => {
   return (
     <div>
       <Header onMobileNavOpen={() => setMobileNavOpen(true)} />
+      <div style={{position:"fixed", top:84, paddingTop:50}}>
       <Sidebar
         onMobileClose={() => setMobileNavOpen(false)}
         openMobile={isMobileNavOpen}
       />
+      </div>
 
-      <div>{children}</div>
+      
+<div style={{marginLeft: 256}}>{children}</div>
+      
     </div>
   );
 };

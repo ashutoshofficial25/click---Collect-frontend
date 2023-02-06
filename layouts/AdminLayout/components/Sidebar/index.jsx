@@ -151,7 +151,7 @@ const Sidebar = ({ onMobileClose, openMobile }) => {
       <Hidden mdDown>
         <Drawer
           anchor="left"
-          style={{ width: 256, top: 64, height: "calc(100% - 64px)" }}
+          style={{ width: 256, top: "64px !important", height: "calc(100% - 64px)",  }}
           open
           variant="persistent"
         >

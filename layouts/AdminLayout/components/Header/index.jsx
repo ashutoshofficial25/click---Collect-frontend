@@ -16,7 +16,7 @@ import Image from "next/image";
 
 const Header = ({ onMobileNavOpen, ...rest }) => {
   return (
-    <AppBar className="bg-rose-500 z-10" elevation={0} {...rest}>
+    <AppBar className="bg-rose-500" elevation={0} {...rest}>
       <Toolbar>
         <Link href="/admin" className="flex">
           <Image
