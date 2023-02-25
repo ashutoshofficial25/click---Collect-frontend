@@ -7,6 +7,7 @@ const ProductDetails = () => {
       <Head>
         <title>Product Details</title>
       </Head>
+      <div></div>
     </div>
   );
 };

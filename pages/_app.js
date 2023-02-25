@@ -6,7 +6,7 @@ import { AdminLayout } from "../layouts";
 import "../styles/globals.css";
 
 export default function App({ Component, pageProps }) {
-  const isAdmin = true;
+  const isAdmin = false;
   return (
     <Fragment>
       {isAdmin ? (
