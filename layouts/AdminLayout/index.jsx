@@ -6,18 +6,13 @@ const AdminLayout = ({ children }) => {
   const [isMobileNavOpen, setMobileNavOpen] = useState(false);
   return (
     <div>
-      <main
-        className="min-h-screen w-full bg-gray-100 text-gray-700"
-        x-data="layout"
-      >
-        <Header />
+      <Header onMobileNavOpen={() => setMobileNavOpen(true)} />
+      <Sidebar
+        onMobileClose={() => setMobileNavOpen(false)}
+        openMobile={isMobileNavOpen}
+      />
 
-        <div className="flex">
-          <Sidebar />
-          <div>{children}</div>
-        </div>
-      </main>
-      {/* <div>{children}</div> */}
+      <div>{children}</div>
     </div>
   );
 };
