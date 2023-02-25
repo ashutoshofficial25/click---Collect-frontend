@@ -1,17 +1,23 @@
 import { useState } from "react";
-import { Header, Sidebar } from "./components";
+import Header from "./Header";
+import Sidebar from "./Sidebar";
 
 const AdminLayout = ({ children }) => {
   const [isMobileNavOpen, setMobileNavOpen] = useState(false);
   return (
     <div>
-      <Header onMobileNavOpen={() => setMobileNavOpen(true)} />
-      <Sidebar
-        onMobileClose={() => setMobileNavOpen(false)}
-        openMobile={isMobileNavOpen}
-      />
+      <main
+        className="min-h-screen w-full bg-gray-100 text-gray-700"
+        x-data="layout"
+      >
+        <Header />
 
-      <div>{children}</div>
+        <div className="flex">
+          <Sidebar />
+          <div>{children}</div>
+        </div>
+      </main>
+      {/* <div>{children}</div> */}
     </div>
   );
 };
