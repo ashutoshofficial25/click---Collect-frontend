@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { Header, Sidebar } from "./components";
-import Dashborad from "../../pages/admin/Dashborad";
 
 const AdminLayout = ({ children }) => {
   const [isMobileNavOpen, setMobileNavOpen] = useState(false);
@@ -14,9 +13,7 @@ const AdminLayout = ({ children }) => {
       <div className="flex">
         <Sidebar />
 
-        <div className="w-full p-4">
-          <Dashborad />
-        </div>
+        <div className="w-full p-4">{children}</div>
       </div>
     </main>
   );

@@ -15,7 +15,7 @@ const Sidebar = () => {
       x-show="asideOpen"
     >
       <Link
-        href="/dashboard"
+        href="/admin/dashboard"
         className="flex items-center gap-3 rounded-md px-2 py-3 hover:bg-gray-100 "
       >
         <DashboardRoundedIcon />
