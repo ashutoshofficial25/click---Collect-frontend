@@ -8,12 +8,17 @@ import Link from "next/link";
 import Head from "next/head";
 
 function VerifyOtp() {
-  let email = localStorage.getItem("email");
+  let email = "";
+  if (typeof window !== "undefined") {
+    email = localStorage.getItem("email");
+  }
 
   function handleSubmit(e) {
     e.preventDefault();
     //check for user password and then login as user or admin
-    localStorage.removeItem("email");
+    if (typeof window !== "undefined") {
+      localStorage.removeItem("email");
+    }
   }
 
   return (

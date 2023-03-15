@@ -17,7 +17,9 @@ const login = () => {
       // function to check user already registered or new.
       //if new router.push('/login/create-password)
       //if old router.push("/login/verify-password)
-      localStorage.setItem("email", email);
+      if (typeof window !== "undefined") {
+        localStorage.setItem("email", email);
+      }
 
       router.push("/login/verify-password");
     }
