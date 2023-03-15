@@ -7,14 +7,14 @@ import { Box } from "@mui/system";
 import Link from "next/link";
 import Head from "next/head";
 
-const VerifyOtp = () => {
+function VerifyOtp() {
   let email = localStorage.getItem("email");
 
-  const handleSubmit = (e) => {
+  function handleSubmit(e) {
     e.preventDefault();
     //check for user password and then login as user or admin
     localStorage.removeItem("email");
-  };
+  }
 
   return (
     <Box height="100vh" p={4} sx={{ backgroundColor: "#fcefe8" }}>
@@ -85,6 +85,6 @@ const VerifyOtp = () => {
       </Card>
     </Box>
   );
-};
+}
 
 export default VerifyOtp;
