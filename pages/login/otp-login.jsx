@@ -9,16 +9,16 @@ import Head from "next/head";
 
 const OTPLogin = () => {
   return (
-    <Box height="100vh" p={4} sx={{ backgroundColor: "#fcefe8" }}>
+    <Box height="90vh" p={5} sx={{ backgroundColor: "#fcefe8" }}>
       <Head>
         <title>Login with OTP</title>
       </Head>
 
       <Card
         sx={{
-          maxWidth: 400,
+          maxWidth: 500,
           margin: "auto",
-          padding: { lg: "40px", sm: "36px", xs: "28px" },
+          padding: { lg: "60px", sm: "56px", xs: "36px" },
         }}
       >
         <CardContent>
