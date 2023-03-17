@@ -1,10 +1,7 @@
 import React, { useState } from "react";
-import SearchIcon from "@mui/icons-material/Search";
-import { Box } from "@mui/system";
-import logo from "../../public/static/myntra-logo.png";
+
 import ecomlogo from "../../public/static/Ecomm-Logo.png";
 import Image from "next/image";
-import styles from "./Navbar.module.scss";
 import Link from "next/link";
 import { useSelector } from "react-redux";
 
@@ -101,13 +98,13 @@ const Navbar = () => {
               <div className="absolute w-72 p-5 shadow-lg hidden text-gray-700 mt-16 z-10 bg-white group-hover:block">
                 <div className="">
                   <div className="text-sm font-semibold">Welcome</div>
-                  {!user?.username && (
+                  {!user && (
                     <div className="text-sm ">
                       To access account and manage orders
                     </div>
                   )}
 
-                  {user?.username ? (
+                  {user ? (
                     <Link
                       href="/profile"
                       className="transition duration-300 ease-in-out "
@@ -159,6 +156,14 @@ const Navbar = () => {
                   <div className="text-sm hover:font-semibold">
                     Saved Addresses
                   </div>
+                  {user && (
+                    <Link
+                      href="/profile"
+                      className="transition duration-300 ease-in-out "
+                    >
+                      {user.username}
+                    </Link>
+                  )}
                 </div>
               </div>
             </div>

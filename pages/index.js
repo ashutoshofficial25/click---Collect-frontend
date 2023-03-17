@@ -7,7 +7,6 @@ import { useSelector } from "react-redux";
 
 export default function Home() {
   const { user } = useSelector((state) => state.user);
-  console.log("log: user", user);
 
-  return <>{user.role == "vendor" ? <Admin /> : <Homepage />}</>;
+  return <>{user && user.role == "vendor" ? <Admin /> : <Homepage />}</>;
 }
