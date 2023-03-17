@@ -3,9 +3,11 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Admin from "./admin";
 import Homepage from "../components/Home";
+import { useSelector } from "react-redux";
 
 export default function Home() {
-  let isAdmin = false;
+  const { user } = useSelector((state) => state.user);
+  console.log("log: user", user);
 
-  return <>{isAdmin ? <Admin /> : <Homepage />}</>;
+  return <>{user.role == "vendor" ? <Admin /> : <Homepage />}</>;
 }
