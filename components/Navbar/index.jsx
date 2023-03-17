@@ -6,9 +6,11 @@ import ecomlogo from "../../public/static/Ecomm-Logo.png";
 import Image from "next/image";
 import styles from "./Navbar.module.scss";
 import Link from "next/link";
+import { useSelector } from "react-redux";
 
 const Navbar = () => {
   const [searchItem, setSearchItem] = useState();
+  const { user } = useSelector((state) => state.user);
 
   return (
     <div className="sticky top-0 z-50 bg-white shadow-md w-full">
@@ -99,19 +101,30 @@ const Navbar = () => {
               <div className="absolute w-72 p-5 shadow-lg hidden text-gray-700 mt-16 z-10 bg-white group-hover:block">
                 <div className="">
                   <div className="text-sm font-semibold">Welcome</div>
-                  <div className="text-sm ">
-                    To access account and manage orders
-                  </div>
+                  {!user?.username && (
+                    <div className="text-sm ">
+                      To access account and manage orders
+                    </div>
+                  )}
 
-                  <Link
-                    href="/login"
-                    className="  transition duration-300 ease-in-out "
-                  >
-                    {" "}
-                    <button className="bg-transparent hover:border-red-600 block text-black  py-1 px-2 border border-red-400  rounded">
-                      LOGIN / SIGNUP
-                    </button>
-                  </Link>
+                  {user?.username ? (
+                    <Link
+                      href="/profile"
+                      className="transition duration-300 ease-in-out "
+                    >
+                      {user.username}
+                    </Link>
+                  ) : (
+                    <Link
+                      href="/auth/login"
+                      className="transition duration-300 ease-in-out "
+                    >
+                      {" "}
+                      <button className="bg-transparent hover:border-red-600 block text-black  py-1 px-2 border border-red-400  rounded">
+                        LOGIN / SIGNUP
+                      </button>
+                    </Link>
+                  )}
                   <hr className="my-4" />
 
                   <div>
@@ -125,7 +138,7 @@ const Navbar = () => {
                     </div>
                     <div className="">
                       <span className="text-sm hover:font-semibold">
-                        Myntra Insider{" "}
+                        Menbership
                       </span>
                       <span className="items-center justify-center bg-red-400 px-2 text-xs text-white">
                         new
