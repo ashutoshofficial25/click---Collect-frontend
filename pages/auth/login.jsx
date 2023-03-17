@@ -41,7 +41,7 @@ const login = () => {
       </Head>
 
       <Card sx={{ maxWidth: 500, margin: "auto" }} elevation={0}>
-        <Image src={loginOfferImg} width="620px" height="auto" />
+        {/* <Image src={loginOfferImg} width="620px" height="auto" /> */}
         <CardContent>
           <Box px={4} pt={3}>
             <div className="mb-7">

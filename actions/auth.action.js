@@ -26,6 +26,6 @@ export const loginuser = (payload) => {
   };
 };
 
-export const createUser = (payload) => {
+export const createUser = async (payload) => {
   const { fullname, email, password } = payload;
 };

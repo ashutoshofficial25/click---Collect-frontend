@@ -1,33 +1,46 @@
 import React, { useState } from "react";
-import { Card, CardContent, Typography } from "@mui/material";
+import {
+  Card,
+  CardContent,
+  FormControl,
+  InputAdornment,
+  InputLabel,
+  MenuItem,
+  Select,
+  TextField,
+} from "@mui/material";
 import Image from "next/image";
 import { Box } from "@mui/system";
 import Link from "next/link";
 import Head from "next/head";
 import { useRouter } from "next/router";
-import { loginuser } from "../../actions/auth.action";
+import { createUser, loginuser } from "../../actions/auth.action";
 import loginOfferImg from "../../public/static/login-offer.png";
+import { Formik } from "formik";
 
 const login = () => {
   const [auth, setAuth] = useState({
+    firstName: "",
+    lastName: "",
     email: "",
+    gender: "",
+    age: "",
+    mobileNumber: "",
     password: "",
-    fullname: "",
   });
   const router = useRouter();
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-
-    console.log(auth);
-    if (auth.fullname && auth.email && auth.password) {
-      let user = loginuser({
-        fullname: auth.fullname,
-        email: auth.email,
-        password: auth.password,
-      });
-      console.log(user);
-    }
+  const initialState = {
+    firstName: "",
+    lastName: "",
+    email: "",
+    gender: "",
+    age: "",
+    mobileNumber: "",
+    password: "",
+  };
+  const handleSingup = async (formValues) => {
+    const singup = await createUser(formValues);
+    console.log("log:", formValues);
   };
 
   return (
@@ -37,7 +50,7 @@ const login = () => {
       </Head>
 
       <Card sx={{ maxWidth: 500, margin: "auto" }} elevation={0}>
-        <Image src={loginOfferImg} width="620px" height="auto" />
+        {/* <Image src={loginOfferImg} width="620px" height="auto" /> */}
 
         <CardContent>
           <Box px={4} pt={3}>
@@ -46,56 +59,131 @@ const login = () => {
                 Signup
               </span>
             </div>
-            <form onSubmit={handleSubmit}>
-              <input
-                type="text"
-                id="name"
-                value={auth.fullname}
-                onChange={(e) => setAuth({ ...auth, fullname: e.target.value })}
-                className="border mb-4 border-gray-300 text-gray-900 text-md block w-full pl-5 p-2.5 focus:border-gray-600 outline-none "
-                placeholder="Your Fullname"
-                required
-              />
-              <input
-                type="email"
-                id="email"
-                value={auth.email}
-                onChange={(e) => setAuth({ ...auth, email: e.target.value })}
-                className="border mb-4 border-gray-300 text-gray-900 text-md block w-full pl-5 p-2.5 focus:border-gray-600 outline-none "
-                placeholder="Your Email"
-                required
-              />
-              <input
-                type="password"
-                id="password"
-                value={auth.password}
-                onChange={(e) => setAuth({ ...auth, password: e.target.value })}
-                className="border  border-gray-300 text-gray-900 text-md block w-full pl-5 p-2.5 focus:border-gray-600 outline-none "
-                placeholder="Your Password"
-                required
-              />
-              <div className="my-4 ">
-                <span className="font-sm tracking-tight  text-gray-500">
-                  By continuing, I agree to the
-                </span>{" "}
-                <Link
-                  className="font-semibold font-sm  tracking-tight text-rose-500"
-                  href="#"
-                >
-                  Terms of Use
-                </Link>{" "}
-                &{" "}
-                <Link className="font-semibold text-rose-500" href="#">
-                  Privacy & Policy
-                </Link>
-              </div>{" "}
-              <button
-                type="submit"
-                class="bg-rose-500 w-full hover:bg-rose-600 text-white font-semibold my-2 py-2 px-4"
-              >
-                Singup
-              </button>
-            </form>
+            <Formik onSubmit={handleSingup} initialValues={initialState}>
+              {({ handleChange, handleSubmit, values }) => (
+                <form onSubmit={handleSubmit}>
+                  <TextField
+                    label="First name"
+                    id="firstName"
+                    className="mb-3"
+                    color="info"
+                    variant="outlined"
+                    size="small"
+                    fullWidth
+                    required
+                    value={values.firstName}
+                    onChange={handleChange}
+                  />
+                  <TextField
+                    label="Last name"
+                    className="mb-3"
+                    id="lastName"
+                    color="info"
+                    variant="outlined"
+                    size="small"
+                    fullWidth
+                    required
+                    value={values.lastName}
+                    onChange={handleChange}
+                  />
+                  <Box display="flex" justifyContent="space-between" gap={2}>
+                    <FormControl fullWidth className="mb-3">
+                      <InputLabel id="gender">Gender</InputLabel>
+                      <Select
+                        labelId="gender"
+                        id="gender"
+                        value={values.gender}
+                        label="Gender"
+                        size="small"
+                        onChange={handleChange}
+                      >
+                        <MenuItem value="Male">Male</MenuItem>
+                        <MenuItem value="Female">Female</MenuItem>
+                        <MenuItem value="Others">Others</MenuItem>
+                      </Select>
+                    </FormControl>
+
+                    <TextField
+                      label="Age"
+                      id="age"
+                      className="mb-3"
+                      size="small"
+                      fullWidth
+                      required
+                      value={values.age}
+                      onChange={handleChange}
+                      color="info"
+                      variant="outlined"
+                    />
+                  </Box>
+                  <TextField
+                    label="Email"
+                    id="email"
+                    className="mb-3"
+                    type="email"
+                    size="small"
+                    fullWidth
+                    required
+                    value={values.email}
+                    onChange={handleChange}
+                    color="info"
+                    variant="outlined"
+                  />
+                  <TextField
+                    label="Mobile Number"
+                    className="mb-3"
+                    size="small"
+                    fullWidth
+                    required
+                    value={values.mobileNumber}
+                    onChange={handleChange}
+                    id="mobileNumber"
+                    color="info"
+                    variant="outlined"
+                    InputProps={{
+                      startAdornment: (
+                        <InputAdornment position="start">+91</InputAdornment>
+                      ),
+                    }}
+                  />
+                  <TextField
+                    label="Password"
+                    className="mb-3"
+                    type="password"
+                    size="small"
+                    fullWidth
+                    required
+                    value={values.password}
+                    onChange={handleChange}
+                    id="password"
+                    color="info"
+                    variant="outlined"
+                  />
+                  <div className="my-4 ">
+                    <span className="font-sm tracking-tight  text-gray-500">
+                      By continuing, I agree to the
+                    </span>{" "}
+                    <Link
+                      className="font-semibold font-sm  tracking-tight text-rose-500"
+                      href="#"
+                    >
+                      Terms of Use
+                    </Link>{" "}
+                    &{" "}
+                    <Link className="font-semibold text-rose-500" href="#">
+                      Privacy & Policy
+                    </Link>
+                  </div>{" "}
+                  <button
+                    type="submit"
+                    class="bg-rose-500 w-full hover:bg-rose-600 text-white font-semibold my-2 py-2 px-4"
+                  >
+                    Singup
+                  </button>
+                </form>
+              )}
+            </Formik>
+
             <div className="mt-4">
               <span className="font-base text-gray-700">
                 Already have an account?
