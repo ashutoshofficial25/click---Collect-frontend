@@ -6,22 +6,31 @@ import { Box } from "@mui/system";
 import Link from "next/link";
 import Head from "next/head";
 import { useRouter } from "next/router";
+import { loginuser } from "../../actions/auth.action";
+import { useDispatch } from "react-redux";
+import { userLogin } from "../../feature/userSlice";
 
 const login = () => {
-  const [email, setEmail] = useState("");
+  const [auth, setAuth] = useState({
+    email: "",
+    password: "",
+  });
+  const dispatch = useDispatch();
   const router = useRouter();
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (email) {
-      // function to check user already registered or new.
-      //if new router.push('/login/create-password)
-      //if old router.push("/login/verify-password)
-      if (typeof window !== "undefined") {
-        localStorage.setItem("email", email);
-      }
 
-      router.push("/login/verify-password");
+    console.log(auth);
+    if (auth.email && auth.password) {
+      let user = loginuser(auth.email, auth.password);
+      console.log(user);
+      dispatch(userLogin(user));
+      if (user.role === "admin" || user.role === "vendor") {
+        router.push("/admin");
+      } else {
+        router.push("/");
+      }
     }
   };
 
@@ -39,22 +48,29 @@ const login = () => {
               <span className="text-2xl font-semibold text-gray-700">
                 Login
               </span>
-              <span className="text-base font-medium mx-1 text-gray-600">
-                or
-              </span>
-              <span className="text-2xl font-semibold text-gray-600">
-                Signup
-              </span>
             </div>
             <form onSubmit={handleSubmit}>
               <div className=" mb-4">
                 <input
                   type="email"
                   id="email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
+                  value={auth.email}
+                  onChange={(e) => setAuth({ ...auth, email: e.target.value })}
                   className="border border-gray-300 text-gray-900 text-md block w-full pl-5 p-2.5 focus:border-gray-600 outline-none "
                   placeholder="Your Email"
+                  required
+                />
+              </div>
+              <div className=" mb-4">
+                <input
+                  type="password"
+                  id="password"
+                  value={auth.password}
+                  onChange={(e) =>
+                    setAuth({ ...auth, password: e.target.value })
+                  }
+                  className="border border-gray-300 text-gray-900 text-md block w-full pl-5 p-2.5 focus:border-gray-600 outline-none "
+                  placeholder="Your Password"
                   required
                 />
               </div>
@@ -77,7 +93,7 @@ const login = () => {
                 type="submit"
                 class="bg-rose-500 w-full hover:bg-rose-600 text-white font-semibold my-2 py-2 px-4"
               >
-                CONTINUE
+                Login
               </button>
             </form>
             <div className="mt-4">

@@ -5,13 +5,14 @@ export const userSlice = createSlice({
   initialState: {
     user: {
       isAdmin: false,
-      username: "Ashutosh",
-      role: "user",
+      username: "",
+      role: "",
     },
     token: null,
   },
   reducers: {
     userLogin: (state, action) => {
+      console.log("log: action", action.payload);
       state.user = action.payload;
     },
     logout: (state, action) => {

@@ -2,7 +2,7 @@ import Head from "next/head";
 import { Fragment } from "react";
 import { useSelector } from "react-redux";
 import Navbar from "../components/Navbar";
-import { AdminLayout } from "../layouts";
+import AdminLayout from "./AdminLayout";
 
 export default function Routes({ Component, pageProps }) {
   const { user } = useSelector((state) => state.user);
