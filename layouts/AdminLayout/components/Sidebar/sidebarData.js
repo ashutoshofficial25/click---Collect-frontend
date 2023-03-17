@@ -47,6 +47,7 @@ export const adminSidebar = [
     icon: <DashboardRoundedIcon />,
   },
   { title: "Customers", url: "/admin/users", icon: <GroupRoundedIcon /> },
+  { title: "Vendors", url: "/admin/vendors", icon: <GroupRoundedIcon /> },
   {
     title: "Payments",
     url: "/admin/payment",
