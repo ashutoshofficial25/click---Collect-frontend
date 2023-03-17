@@ -1,4 +1,5 @@
-export const loginuser = (email, password) => {
+export const loginuser = (payload) => {
+  const { email, password } = payload;
   if (!email || !password) {
     return "";
   }
@@ -23,4 +24,8 @@ export const loginuser = (email, password) => {
     role: "user",
     username: "User Account",
   };
+};
+
+export const createUser = (payload) => {
+  const { fullname, email, password } = payload;
 };
