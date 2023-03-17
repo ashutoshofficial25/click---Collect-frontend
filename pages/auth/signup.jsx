@@ -19,15 +19,6 @@ import loginOfferImg from "../../public/static/login-offer.png";
 import { Formik } from "formik";
 
 const login = () => {
-  const [auth, setAuth] = useState({
-    firstName: "",
-    lastName: "",
-    email: "",
-    gender: "",
-    age: "",
-    mobileNumber: "",
-    password: "",
-  });
   const router = useRouter();
   const initialState = {
     firstName: "",
