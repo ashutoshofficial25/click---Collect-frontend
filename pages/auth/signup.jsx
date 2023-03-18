@@ -18,20 +18,24 @@ import { createUser, loginuser } from "../../actions/auth.action";
 import loginOfferImg from "../../public/static/login-offer.png";
 import { Formik } from "formik";
 
-const login = () => {
+const Signup = () => {
   const router = useRouter();
   const initialState = {
     firstName: "",
     lastName: "",
     email: "",
-    gender: "",
-    age: "",
+    gender: "male",
+    age: 0,
     mobileNumber: "",
     password: "",
   };
   const handleSingup = async (formValues) => {
-    const singup = await createUser(formValues);
-    console.log("log:", formValues);
+    try {
+      const singup = await createUser(formValues);
+      router.push("/auth/login");
+    } catch (error) {
+      console.error(error);
+    }
   };
 
   return (
@@ -97,6 +101,7 @@ const login = () => {
                     <TextField
                       label="Age"
                       id="age"
+                      type="number"
                       className="mb-3"
                       size="small"
                       fullWidth
@@ -190,4 +195,4 @@ const login = () => {
   );
 };
 
-export default login;
+export default Signup;

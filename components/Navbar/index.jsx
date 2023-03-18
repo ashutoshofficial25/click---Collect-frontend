@@ -8,7 +8,6 @@ import { useSelector } from "react-redux";
 const Navbar = () => {
   const [searchItem, setSearchItem] = useState();
   const { user } = useSelector((state) => state.user);
-
   return (
     <div className="sticky top-0 z-50 bg-white shadow-md w-full">
       <div className="border px-6 ">

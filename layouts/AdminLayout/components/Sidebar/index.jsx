@@ -2,6 +2,8 @@ import React from "react";
 import Link from "next/link";
 import { useSelector } from "react-redux";
 import { adminSidebar, vendorSidebar } from "./sidebarData";
+import { Avatar, Typography } from "@mui/material";
+import { Box } from "@mui/system";
 const Sidebar = () => {
   const { user } = useSelector((state) => state.user);
 
@@ -13,6 +15,16 @@ const Sidebar = () => {
       style={{ height: "90.5vh" }}
       x-show="asideOpen"
     >
+      <Box
+        display="flex"
+        className="bg-gray-200 py-3"
+        flexDirection="column"
+        alignItems="center"
+      >
+        <Avatar alt="" src="" />
+        <Typography>Ashutosh</Typography>
+      </Box>
+      <hr color="black" />
       {user && user.role == "admin"
         ? adminSidebar.map((item) => (
             <Link

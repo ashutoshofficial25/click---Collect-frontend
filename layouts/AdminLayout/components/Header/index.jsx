@@ -4,8 +4,8 @@ import AdminPanelSettingsIcon from "@mui/icons-material/AdminPanelSettings";
 
 const Header = () => {
   return (
-    <header className="flex w-full items-center justify-between border-b-2 border-gray-200 bg-white p-2 shadow-xl">
-      <div className=" w-48 divide-y  bg-white">
+    <header className="flex w-full items-center justify-between border-b-2 border-gray-200 bg-rose-500 p-2 px-5 shadow-xl">
+      <div className=" w-48 divide-y  ">
         <div className="flex items-center space-x-2 p-2">
           <AdminPanelSettingsIcon />
           <span className="font-medium">Click & Collect Admin</span>

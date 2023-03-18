@@ -1,31 +1,26 @@
-export const loginuser = (payload) => {
-  const { email, password } = payload;
-  if (!email || !password) {
-    return "";
-  }
+import { Axios } from "../configs";
+import { constants } from "../constants/constants";
 
-  if (email === "admin@example.com" && password === "123456") {
-    return {
-      isAdmin: false,
-      role: "admin",
-      username: "Admin Account",
-    };
+export const loginuser = async (payload) => {
+  try {
+    const result = await Axios.post(
+      `${constants.BASE_URL}/auth/login`,
+      payload
+    );
+    return result.data;
+  } catch (error) {
+    return error.response.data;
   }
-  if (email === "vendor@example.com" && password === "123456") {
-    return {
-      isAdmin: false,
-      role: "vendor",
-      username: "Vendor Account",
-    };
-  }
-
-  return {
-    isAdmin: false,
-    role: "user",
-    username: "User Account",
-  };
 };
 
 export const createUser = async (payload) => {
-  const { fullname, email, password } = payload;
+  try {
+    const result = await Axios.post(
+      `${constants.BASE_URL}/auth/signup`,
+      payload
+    );
+    return result.data;
+  } catch (error) {
+    return error.response.data;
+  }
 };

@@ -10,7 +10,7 @@ import { loginuser } from "../../actions/auth.action";
 import { useDispatch } from "react-redux";
 import { userLogin } from "../../feature/userSlice";
 
-const login = () => {
+const Login = () => {
   const [auth, setAuth] = useState({
     email: "",
     password: "",
@@ -18,19 +18,26 @@ const login = () => {
   const dispatch = useDispatch();
   const router = useRouter();
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-
-    console.log(auth);
-    if (auth.email && auth.password) {
-      let user = loginuser({ email: auth.email, password: auth.password });
-      console.log(user);
-      dispatch(userLogin(user));
-      if (user.role === "admin" || user.role === "vendor") {
-        router.push("/admin");
-      } else {
+    try {
+      if (auth.email && auth.password) {
+        let result = await loginuser({
+          username: auth.email,
+          password: auth.password,
+        });
+        if (result.error) {
+          return console.log("log: error:", result.error);
+        }
+        if (typeof window !== "undefined") {
+          localStorage.setItem("token", result.data.accessToken);
+          localStorage.setItem("account", JSON.stringify(result.data.user));
+        }
+        dispatch(userLogin(result?.data?.user));
         router.push("/");
       }
+    } catch (error) {
+      console.log("log: err", error);
     }
   };
 
@@ -105,4 +112,4 @@ const login = () => {
   );
 };
 
-export default login;
+export default Login;
