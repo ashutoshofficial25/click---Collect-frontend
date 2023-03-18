@@ -15,7 +15,12 @@ const AdminLayout = ({ children }) => {
 
       <div className="flex">
         <Sidebar />
-        <div className="w-full p-4">{children}</div>
+        <div
+          className="w-full p-4"
+          style={{ overflowY: "scroll", height: "90vh" }}
+        >
+          {children}
+        </div>
       </div>
     </main>
   );
