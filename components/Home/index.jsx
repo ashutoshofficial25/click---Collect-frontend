@@ -30,8 +30,17 @@ import topFive from "/public/static/top-pics/top-pics-5.png";
 import topSix from "/public/static/top-pics/top-pics-6.png";
 import topSeven from "/public/static/top-pics/top-pics-7.png";
 import HeroOffer from "/components/HeroOffer";
+import { useRouter } from "next/router";
+import { useSelector } from "react-redux";
 
 export default function Homepage() {
+  const { user } = useSelector((state) => state.user);
+  const router = useRouter();
+
+  if (user?.roles[0] == "ADMIN" || user?.roles[0] == "VENDOR") {
+    router.push("/admin");
+  }
+
   return (
     <>
       <Carousel />

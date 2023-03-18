@@ -34,7 +34,14 @@ const Login = () => {
           localStorage.setItem("account", JSON.stringify(result.data.user));
         }
         dispatch(userLogin(result?.data?.user));
-        router.push("/");
+        if (
+          result.data.user.roles[0] == "ADMIN" ||
+          result.data.user.roles[0] == "VENDOR"
+        ) {
+          router.push("/admin/dashboard");
+        } else {
+          router.push("/");
+        }
       }
     } catch (error) {
       console.log("log: err", error);

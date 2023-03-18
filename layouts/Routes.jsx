@@ -11,7 +11,7 @@ export default function Routes({ Component, pageProps }) {
 
   return (
     <>
-      {user && (user.role === "vendor" || user.role === "admin") ? (
+      {user && (user.roles[0] === "ADMIN" || user.roles[0] === "VENDOR") ? (
         <AdminLayout>
           <Component {...pageProps} />{" "}
         </AdminLayout>

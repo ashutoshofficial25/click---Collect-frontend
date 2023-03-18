@@ -25,7 +25,7 @@ const Sidebar = () => {
         <Typography>Ashutosh</Typography>
       </Box>
       <hr color="black" />
-      {user && user.role == "admin"
+      {user && user.roles[0] == "ADMIN"
         ? adminSidebar.map((item) => (
             <Link
               href={item.url}
@@ -35,7 +35,7 @@ const Sidebar = () => {
               <span>{item.title}</span>
             </Link>
           ))
-        : user.role == "vendor" &&
+        : user.roles[0] == "VENDOR" &&
           vendorSidebar.map((item) => (
             <Link
               href={item.url}
