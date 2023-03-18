@@ -5,5 +5,7 @@ if (typeof window !== "undefined") {
 }
 
 export const Axios = axios.create({
-  headers: `Bearer ${token}`,
+  headers: {
+    Authorization: `Bearer ${token}`,
+  },
 });

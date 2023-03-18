@@ -24,3 +24,13 @@ export const createUser = async (payload) => {
     return error.response.data;
   }
 };
+
+export const logoutUser = async () => {
+  // const result = await Axios.get(`${constants.BASE_URL}/auth/logout`);
+
+  if (typeof window !== "undefined") {
+    localStorage.removeItem("token");
+    localStorage.removeItem("account");
+  }
+  // return result.data;
+};

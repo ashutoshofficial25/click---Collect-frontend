@@ -1,13 +1,24 @@
 import React, { useState } from "react";
-
 import ecomlogo from "../../public/static/Ecomm-Logo.png";
 import Image from "next/image";
 import Link from "next/link";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { logoutUser } from "../../actions/auth.action";
+import { Router, useRouter } from "next/router";
+import { logout } from "../../feature/userSlice";
 
 const Navbar = () => {
   const [searchItem, setSearchItem] = useState();
   const { user } = useSelector((state) => state.user);
+  const dispatch = useDispatch();
+  const router = useRouter();
+
+  const singout = async () => {
+    await logoutUser();
+    dispatch(logout);
+    router.push("/auth/login");
+  };
+
   return (
     <div className="sticky top-0 z-50 bg-white shadow-md w-full">
       <div className="border px-6 ">
@@ -156,12 +167,12 @@ const Navbar = () => {
                     Saved Addresses
                   </div>
                   {user && (
-                    <Link
-                      href="/profile"
+                    <div
+                      onClick={singout}
                       className="transition duration-300 ease-in-out "
                     >
-                      {user.username}
-                    </Link>
+                      Logout
+                    </div>
                   )}
                 </div>
               </div>
