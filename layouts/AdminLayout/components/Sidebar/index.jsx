@@ -20,9 +20,10 @@ const Sidebar = () => {
         className="bg-gray-200 py-3"
         flexDirection="column"
         alignItems="center"
+        gap={1}
       >
         <Avatar alt="" src="" />
-        <Typography>Ashutosh</Typography>
+        <Typography>{user.firstName}</Typography>
       </Box>
       <hr color="black" />
       {user && user.roles[0] == "ADMIN"
