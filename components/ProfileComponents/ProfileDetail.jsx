@@ -1,6 +1,8 @@
 import React from "react";
+import { useSelector } from "react-redux";
 
 const ProfileDetail = () => {
+  const { user } = useSelector((state) => state.user);
   return (
     <>
       <div className="text-center py-5 "> Profile Details</div>
@@ -10,7 +12,9 @@ const ProfileDetail = () => {
       <div className="w-96 text-center max-[920px]:w-60 max-[500px]:w-60  m-auto">
         <div className="flex justify-between py-2 text-gray-700">
           <span>Full Name</span>
-          <span>Ashutosh Maurya</span>
+          <span>
+            {user.firstName} {user.lastName}
+          </span>
         </div>
         <div className="flex justify-between py-2 text-gray-700">
           <span>Mobile Number</span>
@@ -18,7 +22,7 @@ const ProfileDetail = () => {
         </div>
         <div className="flex justify-between py-2 text-gray-700">
           <span>Email ID</span>
-          <span>ashutoshm9695@gmail.com</span>
+          <span>{user.username}</span>
         </div>
         <div className="flex justify-between py-2 text-gray-700">
           <span>Gender</span>

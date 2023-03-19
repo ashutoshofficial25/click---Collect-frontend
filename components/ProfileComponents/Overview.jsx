@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React from "react";
-import {OverviewCards} from ".";
+import { useSelector } from "react-redux";
+import { OverviewCards } from ".";
 
 const overviewData = [
   {
@@ -60,6 +61,7 @@ const overviewData = [
 ];
 
 const Overview = ({ setContent }) => {
+  const { user } = useSelector((state) => state.user);
   return (
     <>
       <div className="w-full flex justify-between bg-gray-200 py-5 px-7">
@@ -71,7 +73,7 @@ const Overview = ({ setContent }) => {
             alt="profile"
             className="bg-gray-400 p-2"
           />
-          <span>ashutoshm9695@gmail.com</span>
+          <span>{user.username}</span>
         </div>
 
         <span>

@@ -5,6 +5,8 @@ import CategoryRoundedIcon from "@mui/icons-material/CategoryRounded";
 import CurrencyRupeeRoundedIcon from "@mui/icons-material/CurrencyRupeeRounded";
 import InventoryRoundedIcon from "@mui/icons-material/InventoryRounded";
 import DiscountRoundedIcon from "@mui/icons-material/DiscountRounded";
+import CategoryIcon from "@mui/icons-material/Category";
+import { Loyalty, ProductionQuantityLimits } from "@mui/icons-material";
 
 export const vendorSidebar = [
   {
@@ -48,6 +50,22 @@ export const adminSidebar = [
   },
   { title: "Customers", url: "/admin/users", icon: <GroupRoundedIcon /> },
   { title: "Vendors", url: "/admin/vendors", icon: <GroupRoundedIcon /> },
+  {
+    title: "Categories",
+    url: "/admin/category",
+    icon: <CategoryIcon />,
+  },
+
+  {
+    title: "Products",
+    url: "/admin/products",
+    icon: <ProductionQuantityLimits />,
+  },
+  {
+    title: "Sales",
+    url: "/admin/sales",
+    icon: <Loyalty />,
+  },
   {
     title: "Payments",
     url: "/admin/payment",
