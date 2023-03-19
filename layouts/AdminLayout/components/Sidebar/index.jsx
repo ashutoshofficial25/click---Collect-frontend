@@ -30,7 +30,7 @@ const Sidebar = () => {
         alignItems="center"
         gap={1}
       >
-        <Avatar alt="" src="" />
+        <Avatar src="#" alt={user.firstName} />
         <Typography>{user.firstName}</Typography>
       </Box>
       <hr color="black" />
