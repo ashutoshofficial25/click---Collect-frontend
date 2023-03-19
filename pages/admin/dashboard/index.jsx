@@ -6,17 +6,22 @@ import SwitchAccountOutlinedIcon from "@mui/icons-material/SwitchAccountOutlined
 import {
   Button,
   Card,
+  Divider,
   Grid,
+  Paper,
   Table,
   TableBody,
   TableCell,
   TableContainer,
   TableHead,
   TableRow,
+  Typography,
 } from "@mui/material";
 import HourglassBottomIcon from "@mui/icons-material/HourglassBottom";
 import CustomTable from "../../../components/AdminComp/CustomTable";
 import { Box } from "@mui/system";
+import DeleteIcon from "@mui/icons-material/Delete";
+import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 const Dashboard = () => {
   let data = [
     {
@@ -97,11 +102,18 @@ const Dashboard = () => {
 
       {/* Pending users list */}
       <Box mt={7}>
-        <TableContainer>
+        <TableContainer component={Paper}>
+          <Box mx={2} my={2}>
+            <Typography fontWeight={600} variant="h6" color="#002884">
+              {" "}
+              Vendors List
+            </Typography>
+          </Box>
+          <Divider />
           <Table stickyHeader aria-label="customized table">
             <TableHead>
-              <TableRow>
-                <TableCell>Vendor Name</TableCell>
+              <TableRow sx={{ bgcolor: "#999fff" }}>
+                <TableCell> Vendor Name</TableCell>
                 <TableCell>Location</TableCell>
                 <TableCell>Status</TableCell>
                 <TableCell>Email</TableCell>
@@ -121,6 +133,7 @@ const Dashboard = () => {
                       variant="contained"
                       color="success"
                       sx={{ mr: "5px" }}
+                      endIcon={<CheckCircleIcon />}
                     >
                       Approve
                     </Button>
@@ -129,6 +142,7 @@ const Dashboard = () => {
                       color="error"
                       variant="contained"
                       sx={{ ml: "5px" }}
+                      endIcon={<DeleteIcon />}
                     >
                       Decline
                     </Button>

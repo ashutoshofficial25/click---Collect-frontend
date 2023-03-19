@@ -119,7 +119,7 @@ const Navbar = () => {
                       href="/profile"
                       className="transition duration-300 ease-in-out "
                     >
-                      {user.username}
+                      {user.firstName}
                     </Link>
                   ) : (
                     <Link

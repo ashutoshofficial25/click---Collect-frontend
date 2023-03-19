@@ -1,6 +1,8 @@
 import {
   Box,
   Button,
+  Divider,
+  Paper,
   Table,
   TableBody,
   TableCell,
@@ -55,13 +57,14 @@ const tableData = [
 const Vendors = () => {
   return (
     <Box>
-      <TableContainer style={{ marginTop: "30px" }}>
-        <Box mb={2}>
+      <TableContainer component={Paper} style={{ marginTop: "30px" }}>
+        <Box mx={2} my={2}>
           <Typography fontWeight={600} variant="h6" color="#002884">
             {" "}
             Approved Vendors
           </Typography>
-        </Box>
+        </Box>{" "}
+        <Divider />
         <Table stickyHeader aria-label="customized table">
           <TableHead>
             <TableRow>
@@ -105,14 +108,14 @@ const Vendors = () => {
         </Table>
       </TableContainer>
 
-      <TableContainer style={{ marginTop: "30px" }}>
-        <Box mb={2}>
+      <TableContainer component={Paper} style={{ marginTop: "30px" }}>
+        <Box mx={2} my={2}>
           <Typography fontWeight={600} variant="h6" color="#002884">
             {" "}
             Pending Vendors
           </Typography>
         </Box>
-
+        <Divider />
         <Table stickyHeader aria-label="customized table">
           <TableHead>
             <TableRow>
@@ -155,13 +158,14 @@ const Vendors = () => {
           </TableBody>
         </Table>
       </TableContainer>
-      <TableContainer style={{ marginTop: "30px" }}>
-        <Box mb={2}>
+      <TableContainer component={Paper} style={{ marginTop: "30px" }}>
+        <Box mx={2} my={2}>
           <Typography fontWeight={600} variant="h6" color="#002884">
             {" "}
             Blocked Vendors
           </Typography>
         </Box>
+        <Divider />
         <Table stickyHeader aria-label="customized table">
           <TableHead>
             <TableRow>

@@ -25,7 +25,7 @@ const Signup = () => {
     lastName: "",
     email: "",
     gender: "male",
-    age: 0,
+    age: "",
     mobileNumber: "",
     password: "",
   };
@@ -39,7 +39,7 @@ const Signup = () => {
   };
 
   return (
-    <Box height="90vh" p={5} sx={{ backgroundColor: "#ffedf1" }}>
+    <Box p={5} sx={{ backgroundColor: "#ffedf1" }}>
       <Head>
         <title>Myntra</title>
       </Head>
@@ -60,8 +60,10 @@ const Signup = () => {
                   <TextField
                     label="First name"
                     id="firstName"
-                    className="mb-3"
                     color="info"
+                    sx={{
+                      mb: "15px",
+                    }}
                     variant="outlined"
                     size="small"
                     fullWidth
@@ -71,7 +73,9 @@ const Signup = () => {
                   />
                   <TextField
                     label="Last name"
-                    className="mb-3"
+                    sx={{
+                      mb: "15px",
+                    }}
                     id="lastName"
                     color="info"
                     variant="outlined"
@@ -81,7 +85,14 @@ const Signup = () => {
                     value={values.lastName}
                     onChange={handleChange}
                   />
-                  <Box display="flex" justifyContent="space-between" gap={2}>
+                  <Box
+                    display="flex"
+                    sx={{
+                      mb: "15px",
+                    }}
+                    justifyContent="space-between"
+                    gap={2}
+                  >
                     <FormControl fullWidth className="mb-3">
                       <InputLabel id="gender">Gender</InputLabel>
                       <Select
@@ -102,7 +113,9 @@ const Signup = () => {
                       label="Age"
                       id="age"
                       type="number"
-                      className="mb-3"
+                      sx={{
+                        mb: "15px",
+                      }}
                       size="small"
                       fullWidth
                       required
@@ -115,7 +128,9 @@ const Signup = () => {
                   <TextField
                     label="Email"
                     id="email"
-                    className="mb-3"
+                    sx={{
+                      mb: "15px",
+                    }}
                     type="email"
                     size="small"
                     fullWidth
@@ -127,7 +142,10 @@ const Signup = () => {
                   />
                   <TextField
                     label="Mobile Number"
-                    className="mb-3"
+                    type="number"
+                    sx={{
+                      mb: "15px",
+                    }}
                     size="small"
                     fullWidth
                     required
