@@ -17,9 +17,12 @@ import { useRouter } from "next/router";
 import { createUser, loginuser } from "../../actions/auth.action";
 import loginOfferImg from "../../public/static/login-offer.png";
 import { Formik } from "formik";
+import { useDispatch } from "react-redux";
+import { userLogin } from "../../feature/userSlice";
 
 const Signup = () => {
   const router = useRouter();
+  const dispatch = useDispatch();
   const initialState = {
     firstName: "",
     lastName: "",
@@ -31,8 +34,27 @@ const Signup = () => {
   };
   const handleSingup = async (formValues) => {
     try {
-      const singup = await createUser(formValues);
-      router.push("/auth/login");
+      const result = await createUser(formValues);
+      console.log("log: signup successful", result);
+      if (result.error) {
+        return console.log("log: error:", result.error);
+      }
+      if (typeof window !== "undefined") {
+        localStorage.setItem("token", result.data.accessToken);
+        localStorage.setItem("account", JSON.stringify(result.data.user));
+      }
+      dispatch(userLogin(result?.data?.user));
+      if (
+        result.data.user.roles[0] == "ADMIN" ||
+        result.data.user.roles[0] == "VENDOR"
+      ) {
+        console.log("log:admin ");
+        router.push("/admin/dashboard");
+      } else {
+        console.log("log: user ");
+        router.push("/");
+      }
+      // router.push("/auth/login");
     } catch (error) {
       console.error(error);
     }
