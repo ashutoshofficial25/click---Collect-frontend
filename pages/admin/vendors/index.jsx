@@ -20,6 +20,7 @@ import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import PersonAddIcon from "@mui/icons-material/PersonAdd";
 import PersonPinIcon from "@mui/icons-material/PersonPin";
 import CustomDialog from "../../../components/CustomDialog";
+import AddVendorForm from "../../../components/AdminComp/AddVendorForm";
 
 const tableData = [
   {
@@ -61,6 +62,7 @@ const tableData = [
 
 const Vendors = () => {
   const [sure, setSure] = useState(false);
+  const [open, setOpen] = useState(true);
   return (
     <Box>
       <Box display="flex" justifyContent="space-between">
@@ -75,6 +77,7 @@ const Vendors = () => {
           variant="contained"
           color="primary"
           startIcon={<PersonAddIcon />}
+          onClick={() => setOpen(true)}
         >
           Vendor
         </Button>
@@ -241,6 +244,10 @@ const Vendors = () => {
           </TableBody>
         </Table>
       </TableContainer>
+
+      <CustomDialog title="Add new Vendor" open={open} setOpen={setOpen}>
+        <AddVendorForm setOpen={setOpen} />
+      </CustomDialog>
     </Box>
   );
 };
