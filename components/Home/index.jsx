@@ -37,6 +37,8 @@ export default function Homepage() {
   const { user } = useSelector((state) => state.user);
   const router = useRouter();
 
+  console.log("log: homepage user", user);
+
   if (user?.roles[0] == "ADMIN" || user?.roles[0] == "VENDOR") {
     router.push("/admin");
   }

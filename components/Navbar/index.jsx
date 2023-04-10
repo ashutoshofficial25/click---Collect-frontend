@@ -15,7 +15,7 @@ const Navbar = () => {
 
   const singout = async () => {
     await logoutUser();
-    dispatch(logout);
+    dispatch(logout(null));
     router.push("/auth/login");
   };
 
