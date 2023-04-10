@@ -1,3 +1,4 @@
+import React from "react";
 import {
   Box,
   Button,
@@ -7,7 +8,6 @@ import {
   TextField,
   Typography,
 } from "@mui/material";
-import React, { useState } from "react";
 
 const AddVendorForm = ({ setOpen }) => {
   return (
@@ -73,7 +73,7 @@ const AddVendorForm = ({ setOpen }) => {
             alignItems="center"
           >
             <Typography>Not active</Typography>
-            <Switch />
+            <Switch name="status" aria-label="switch" />
             <Typography>Active</Typography>
           </Grid>
         </Grid>
